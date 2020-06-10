@@ -26,13 +26,15 @@ public class TodosQueryController {
     @GetMapping("/todos")
     public List<TodoResource> todos(@RequestParam("completed") Optional<Boolean> isCompleted) {
 
+        log.info("Got a GET request for all entities.");
+
         // If the url has the 'completed' param, only return those
         if (isCompleted.isPresent()) {
-            final List<TodoResource> results = repository.findByIsCompleted(isCompleted.get()).stream()
+            final List<TodoResource> results = repository.findAllByIsCompleted(isCompleted.get()).stream()
                     .map(TodoResource::fromTodo)
                     .collect(Collectors.toList());
 
-            log.info("Matching todos found: {}", results);
+            log.info("Matching entities found: {}", results);
 
             return results;
         }
@@ -42,20 +44,23 @@ public class TodosQueryController {
                 .map(TodoResource::fromTodo)
                 .collect(Collectors.toList());
 
-        log.info("All todos found: {}", results);
+        log.info("All entities found: {}", results);
 
         return results;
     }
 
     @GetMapping("/todo/{id}")
     public TodoResource todo(@PathVariable final String id) throws RuntimeException {
+
+        log.info("Got a GET request for: {}", id);
+
         final Optional<Todo> todo = repository.findById(id);
 
         todo.ifPresentOrElse(it -> log.info("Todo with id: {} was found", it.id),
                 () -> log.warn("Todo with id: {} was not found.", id));
 
         return todo.map(TodoResource::fromTodo)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such todo found."));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such entity found."));
     }
 
 }

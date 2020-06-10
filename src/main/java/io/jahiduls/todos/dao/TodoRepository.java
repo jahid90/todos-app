@@ -1,10 +1,9 @@
 package io.jahiduls.todos.dao;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface TodoRepository extends MongoRepository<Todo, String> {
-    Optional<Todo> findByIsCompleted(final boolean completed);
+    List<Todo> findAllByIsCompleted(final boolean completed);
 }
