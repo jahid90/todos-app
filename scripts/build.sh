@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
-docker rmi todos:local
+docker rmi todos.service:local
 
-docker build -t todos:local .
+docker build -t todo.service:local .
