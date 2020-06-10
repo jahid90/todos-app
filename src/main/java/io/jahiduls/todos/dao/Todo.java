@@ -2,7 +2,6 @@ package io.jahiduls.todos.dao;
 
 
 import io.jahiduls.todos.resources.TodoResource;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
