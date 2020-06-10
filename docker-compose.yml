@@ -1,0 +1,14 @@
+version: '3'
+
+networks:
+    default:
+        external:
+            name: home_network
+
+services:
+    todos:
+        build: .
+        image: todos:local
+        container_name: todos
+        ports:
+            - 8080:8080

@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
-@Profile("prod")
+@Profile("default")
 @Configuration
-public class MongoConfiguration {
+public class DevMongoConfiguration {
 
-    private static final String DB_HOST = "mongo";
+    private static final String DB_HOST = "localhost";
     private static final String DB_PORT = "27017";
     private static final String DB_NAME = "todos";
     private static final String DB_USER = "admin";
