@@ -1,0 +1,39 @@
+package io.jahiduls.todos.config;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.core.MongoTemplate;
+
+@Configuration
+public class MongoConfiguration {
+
+    private static final String DB_HOST = "localhost";
+    private static final String DB_PORT = "27017";
+    private static final String DB_NAME = "todos";
+    private static final String DB_USER = "admin";
+    private static final String DB_PASSWORD = "admin_password";
+    private static final String DATA_COLLECTION_NAME = "todo";
+    private static final String CONFIG_COLLECTION_NAME = "config";
+
+    @Bean
+    public MongoClient mongoClient() {
+        return MongoClients.create(
+                new StringBuilder("mongodb://")
+                        .append(DB_USER)
+                        .append(":")
+                        .append(DB_PASSWORD)
+                        .append("@")
+                        .append(DB_HOST)
+                        .append(":")
+                        .append(DB_PORT)
+                        .toString()
+        );
+    }
+
+    @Bean
+    public MongoTemplate mongoTemplate() {
+        return new MongoTemplate(mongoClient(), DB_NAME);
+    }
+}
