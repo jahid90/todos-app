@@ -1,78 +1,100 @@
 package io.jahiduls.todos.controller;
 
-import io.jahiduls.todos.dao.Todo;
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.exceptions.ClientException;
+import io.jahiduls.todos.exceptions.ServiceException;
+import io.jahiduls.todos.processors.CommandProcessor;
 import io.jahiduls.todos.resources.TodoResource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
-
-import java.util.Optional;
 
 @Slf4j
 @RestController
 public class TodosCommandController {
 
     @Autowired
-    private TodoRepository repository;
+    private CommandProcessor processor;
 
     @PostMapping("/todos")
-    public TodoResource add(@RequestBody final TodoResource resource) {
-        final Todo savedTodo = repository.save(Todo.fromResource(resource));
+    public ResponseEntity<String> add(@RequestBody final TodoResource resource) {
+        try {
+            log.info("Got an add request for: {}", resource);
 
-        return TodoResource.fromTodo(savedTodo);
+            processor.process(processor.addCommandBuilder().resource(resource).build());
+
+            log.info("Entity successfully added.");
+
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (final ClientException e) {
+
+            log.warn("Client error.", e);
+
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        } catch (final ServiceException e) {
+
+            log.error("Server error.", e);
+
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PostMapping("/todo/edit/{id}")
-    public TodoResource edit(@PathVariable final String id, @RequestBody final TodoResource resource) {
+    public ResponseEntity<String> edit(@PathVariable final String id, @RequestBody final TodoResource resource) {
+        try {
 
-        log.info("Got an edit request for: {}", id);
-        log.info("New data: {}", resource);
+            log.info("Got an edit request for: {}. Payload : {}", id, resource);
 
-        // Ensure that the ids in the url and the request body match
-        if (!id.equals(resource.getId())) {
-            log.warn("Ids in url and request body do not match.");
+            // Ensure that the ids in the url and the request body match
+            if (!id.equals(resource.getId())) {
+                log.warn("Ids in url and request body do not match.");
 
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The ids in the url and the request body do not match.");
+                return new ResponseEntity<>("Ids in url and request body do not match", HttpStatus.BAD_REQUEST);
+            }
+
+            processor.process(processor.editCommandBuilder().resource(resource).build());
+
+            log.info("Entity with id: {} successfully updated.", id);
+
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (final ClientException e) {
+
+            log.warn("Client error.", e);
+
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        } catch (final ServiceException e) {
+
+            log.error("Server error.", e);
+
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
-        // Find the appropriate entity
-        final Optional<Todo> maybeTodo = repository.findById(id);
-
-        // If entity was not found, throw an exception
-        if (!maybeTodo.isPresent()) {
-            log.warn("No such entity found.");
-
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such entity found.");
-        }
-
-        final Todo todo = maybeTodo.get();
-        todo.text = resource.getText();
-        todo.isCompleted = resource.isCompleted();
-        // Update the entity in the data store
-        repository.save(todo);
-
-        log.info("Entity with id: {} successfully updated.", id);
-
-        return TodoResource.fromTodo(todo);
     }
 
     @DeleteMapping("/todo/delete/{id}")
-    public HttpStatus delete(@PathVariable final String id) {
+    public ResponseEntity<String> delete(@PathVariable final String id) {
+        try {
+            log.info("Got a delete request for: {}", id);
 
-        log.info("Got a delete request for: {}", id);
+            processor.process(processor.deleteCommandBuilder().id(id).build());
 
-        repository.deleteById(id);
+            log.info("Entity with id: {} successfully deleted.", id);
 
-        log.info("Entity with id: {} successfully deleted.", id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (final ClientException e) {
 
-        return HttpStatus.OK;
+            log.warn("Client error.", e);
+
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        } catch (final ServiceException e) {
+
+            log.error("Server error.", e);
+
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
-
 }

@@ -2,4 +2,4 @@
 
 docker rmi todos.service:local
 
-docker build -t todo.service:local .
+docker build -t todos.service:local .
