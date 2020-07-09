@@ -19,6 +19,7 @@ export default class App extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.onDelete = this.onDelete.bind(this);
+        this.onToggle = this.onToggle.bind(this);
     }
 
     async componentDidMount() {
@@ -64,11 +65,30 @@ export default class App extends Component {
         }
     }
 
+    async onToggle(id) {
+        try {
+
+            await api.toggle(id);
+
+            const updatedTodos = this.state.todos.map(todo => id === todo.id
+                ? { id: todo.id, text: todo.text, completed: !todo.completed }
+                : todo);
+
+            this.setState({ todos: updatedTodos });
+
+        } catch(error) {
+            console.error(error);
+        }
+    }
+
     render() {
         return (
             <div className='app'>
                 <AddTodo onSubmit={ this.onSubmit }/>
-                <TodoList todos={ this.state.todos } onDelete={ this.onDelete } />
+                <TodoList
+                        todos={ this.state.todos }
+                        onDelete={ this.onDelete }
+                        onToggle={ this.onToggle } />
             </div>
         )
     }

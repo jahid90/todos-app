@@ -33,10 +33,20 @@ const deleteTodo = async (id) => {
     }
 }
 
+const toggleTodo = async (id) => {
+
+    const response = await axios.put(`${baseUrl}/todo/toggle/${id}`);
+
+    if (response.error) {
+        throw new Error(response.error);
+    }
+}
+
 const api = {
     all: getAllTodos,
     add: addTodo,
-    delete: deleteTodo
+    delete: deleteTodo,
+    toggle: toggleTodo
 }
 
 export default api;

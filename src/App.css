@@ -64,3 +64,7 @@ body {
 .todo .icon {
   cursor: pointer;
 }
+
+.todo .completed {
+  text-decoration: line-through;
+}
