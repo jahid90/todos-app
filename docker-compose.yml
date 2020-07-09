@@ -11,4 +11,4 @@ services:
         image: todos.service:local
         container_name: todos
         ports:
-            - 8080:8080
+            - 8080:80
