@@ -1,0 +1,14 @@
+version: '3'
+
+networks:
+    default:
+        external:
+            name: home_network
+
+services:
+    todos.web:
+        build: .
+        image: todos.web:local
+        container_name: todos-web
+        ports:
+            - 3000:80
