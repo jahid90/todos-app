@@ -18,6 +18,7 @@ export default class App extends Component {
         }
 
         this.onSubmit = this.onSubmit.bind(this);
+        this.onDelete = this.onDelete.bind(this);
     }
 
     async componentDidMount() {
@@ -33,7 +34,6 @@ export default class App extends Component {
     }
 
     async onSubmit(text) {
-
         try {
 
             const todo = {
@@ -42,7 +42,7 @@ export default class App extends Component {
                 completed: false
             };
 
-            api.add(todo);
+            await api.add(todo);
 
             this.setState({ todos: [...this.state.todos, todo] });
 
@@ -51,11 +51,24 @@ export default class App extends Component {
         }
     }
 
+    async onDelete(id) {
+        try {
+
+            await api.delete(id);
+
+            const filteredTodos = this.state.todos.filter(todo => id !== todo.id);
+            this.setState({ todos: filteredTodos });
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     render() {
         return (
             <div className='app'>
                 <AddTodo onSubmit={ this.onSubmit }/>
-                <TodoList todos={ this.state.todos } />
+                <TodoList todos={ this.state.todos } onDelete={ this.onDelete } />
             </div>
         )
     }

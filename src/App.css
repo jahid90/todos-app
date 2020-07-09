@@ -60,3 +60,7 @@ body {
   margin-bottom: 10px;
   text-align: left;
 }
+
+.todo .icon {
+  cursor: pointer;
+}

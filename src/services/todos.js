@@ -24,9 +24,19 @@ const addTodo = async (todo) => {
     }
 }
 
+const deleteTodo = async (id) => {
+
+    const response = await axios.delete(`${baseUrl}/todo/${id}`);
+
+    if (response.error) {
+        throw new Error(response.error);
+    }
+}
+
 const api = {
     all: getAllTodos,
-    add: addTodo
+    add: addTodo,
+    delete: deleteTodo
 }
 
 export default api;
