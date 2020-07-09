@@ -1,15 +1,19 @@
 package io.jahiduls.todos.processors;
 
-import io.jahiduls.todos.processors.commands.Command;
-import io.jahiduls.todos.exceptions.ClientException;
-import io.jahiduls.todos.exceptions.ServiceException;
+import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.queries.Query;
+import io.jahiduls.todos.queries.QueryResult;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-public class QueryProcessor implements Processor {
+@AllArgsConstructor
+public class QueryProcessor {
 
-    @Override
-    public void process(final Command command) throws ClientException, ServiceException {
-        command.execute();
+    private final TodoRepository repository;
+
+    public QueryResult process(final Query query) {
+        return query.handle(repository);
     }
+
 }

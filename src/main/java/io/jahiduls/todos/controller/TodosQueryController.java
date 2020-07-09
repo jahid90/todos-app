@@ -1,66 +1,88 @@
 package io.jahiduls.todos.controller;
 
 import io.jahiduls.todos.dao.Todo;
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.exceptions.ClientException;
+import io.jahiduls.todos.processors.QueryProcessor;
+import io.jahiduls.todos.queries.QueryFactory;
+import io.jahiduls.todos.queries.QueryResult;
 import io.jahiduls.todos.resources.TodoResource;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
+@AllArgsConstructor
 public class TodosQueryController {
 
-    @Autowired
-    private TodoRepository repository;
+    private final QueryProcessor queryProcessor;
+    private final QueryFactory factory;
 
     @GetMapping("/todos")
-    public List<TodoResource> todos(@RequestParam("completed") Optional<Boolean> isCompleted) {
+    public List<TodoResource> todos(@RequestParam("completed") final Optional<Boolean> isCompleted) {
 
-        log.info("Got a GET request for all entities.");
+        log.info("[GET ALL] request received");
 
-        // If the url has the 'completed' param, only return those
+        // If the url has the 'completed' param, return filtered results
         if (isCompleted.isPresent()) {
-            final List<TodoResource> results = repository.findAllByIsCompleted(isCompleted.get()).stream()
-                    .map(TodoResource::fromTodo)
-                    .collect(Collectors.toList());
-
-            log.info("Matching entities found: {}", results);
-
-            return results;
+            return filteredQuery(isCompleted.get());
         }
 
         // Else return all the results
-        final List<TodoResource> results = repository.findAll().stream()
-                .map(TodoResource::fromTodo)
-                .collect(Collectors.toList());
+        return fullQuery();
+    }
 
-        log.info("All entities found: {}", results);
+    private List<TodoResource> fullQuery() {
 
-        return results;
+        log.info("Running full query.");
+
+        final QueryResult result = queryProcessor.process(factory.getAll());
+        final List<Todo> todos = (List<Todo>) result.data;
+
+        final List<TodoResource> response = todos.stream().map(TodoResource::fromTodo).collect(Collectors.toList());
+
+        log.info("Retrieved: {}", response);
+
+        return response;
+    }
+
+    private List<TodoResource> filteredQuery(final boolean isCompleted) {
+
+        log.info("Param: [isCompleted: {}] is present. Running filtered query.", isCompleted);
+
+        final QueryResult result = queryProcessor.process(factory.getFiltered(isCompleted));
+        final List<Todo> todos = (List<Todo>) result.data;
+
+        final List<TodoResource> response = todos.stream().map(TodoResource::fromTodo).collect(Collectors.toList());
+
+        log.info("Retrieved: {}", response);
+
+        return response;
     }
 
     @GetMapping("/todo/{id}")
-    public TodoResource todo(@PathVariable final String id) throws RuntimeException {
+    public TodoResource todo(@PathVariable final String id) {
 
-        log.info("Got a GET request for: {}", id);
+        log.info("[GET ONE] [{}] request received.", id);
 
-        final Optional<Todo> todo = repository.findById(id);
+        final QueryResult result = queryProcessor.process(factory.getOne(id));
+        final Optional<Todo> maybeTodo = (Optional<Todo>) result.data;
 
-        todo.ifPresentOrElse(it -> log.info("Todo with id: {} was found", it.id),
-                () -> log.warn("Todo with id: {} was not found.", id));
+        if (maybeTodo.isEmpty()) {
+            throw ClientException.notFound();
+        }
 
-        return todo.map(TodoResource::fromTodo)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such entity found."));
+        final TodoResource response = TodoResource.fromTodo(maybeTodo.get());
+
+        log.info("Retrieved: {}", response);
+
+        return response;
     }
 
 }

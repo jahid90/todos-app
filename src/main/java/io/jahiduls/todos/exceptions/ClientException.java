@@ -1,11 +1,21 @@
 package io.jahiduls.todos.exceptions;
 
-public class ClientException extends Exception {
-    public ClientException(String message) {
-        super(message);
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+public class ClientException extends RuntimeException {
+
+    public static ClientException badRequest() {
+        return new BadRequest();
     }
 
-    public ClientException(String message, Throwable cause) {
-        super(message, cause);
+    public static ClientException notFound() {
+        return new NotFound();
     }
 }
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+class BadRequest extends ClientException {}
+
+@ResponseStatus(HttpStatus.NOT_FOUND)
+class NotFound extends ClientException {}
