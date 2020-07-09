@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,8 +33,8 @@ public class TodosCommandController {
         log.info("[{}] - command emitted to add a todo", resource.getId());
     }
 
-    @PostMapping("/todo/edit")
-    public void edit(@RequestBody final TodoResource resource) {
+    @PutMapping("/todo/update")
+    public void update(@RequestBody final TodoResource resource) {
 
         log.info("[{}] - edit request received", resource.getId());
 
@@ -42,7 +43,7 @@ public class TodosCommandController {
         log.info("[{}] - command emitted to edit the todo.", resource.getId());
     }
 
-    @DeleteMapping("/todo/delete/{id}")
+    @DeleteMapping("/todo/{id}")
     public void delete(@PathVariable final String id) {
 
         log.info("[{}] - delete request received", id);
@@ -51,4 +52,6 @@ public class TodosCommandController {
 
         log.info("[{}] - command emitted to delete the todo.", id);
     }
+
+
 }
