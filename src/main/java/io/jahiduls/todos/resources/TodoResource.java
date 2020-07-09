@@ -1,23 +1,25 @@
 package io.jahiduls.todos.resources;
 
 import io.jahiduls.todos.dao.Todo;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @ToString
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TodoResource {
 
-    @Getter private final String id;
-    @Getter private final String text;
-    @Getter private final boolean isCompleted;
+    @Getter private String id;
+    @Getter private String text;
+    @Getter private boolean isCompleted;
 
     public static TodoResource fromTodo(final Todo todo) {
-        return TodoResource.builder()
-                .id(todo.id)
-                .text(todo.text)
-                .isCompleted(todo.isCompleted)
-                .build();
+        return new TodoResource(todo.id, todo.text, todo.isCompleted);
+    }
+
+    public Todo toTodo() {
+        return new Todo(this.id, this.text, this.isCompleted);
     }
 }

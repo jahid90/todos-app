@@ -1,0 +1,8 @@
+{
+    "license": "ISC",
+    "scripts": {
+        "build": "./mvnw package && docker build -t todos.service:local .",
+        "deploy": "docker-compose up -d",
+        "stop": "docker-compose down"
+    }
+}
