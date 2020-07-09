@@ -53,5 +53,15 @@ public class TodosCommandController {
         log.info("[{}] - command emitted to delete the todo.", id);
     }
 
+    @PutMapping("todo/toggle/{id}")
+    public void toggle(@PathVariable final String id) {
+
+        log.info("[{}] - toggle request received.", id);
+
+        commandBus.emit(factory.toggleCommand(id));
+
+        log.info("[{}] - command emitted to toggle the todo.", id);
+
+    }
 
 }
