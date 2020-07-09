@@ -18,4 +18,8 @@ public final class CommandFactory {
         return DeleteCommand.builder().id(id).build();
     }
 
+    public Command toggleCommand(final String id) {
+        return ToggleCommand.builder().id(id).build();
+    }
+
 }
