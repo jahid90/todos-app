@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import './App.css';
 
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
+
+import api from './services/todos';
 
 export default class App extends Component {
 
@@ -11,31 +14,41 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            todos: [
-                {
-                    id: 1,
-                    text: 'A todo',
-                    completed: false
-                },
-                {
-                    id: 2,
-                    text: 'Another one',
-                    completed: false
-                }
-            ]
+            todos: []
         }
 
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit(text) {
-        this.setState({
-            todos: [...this.state.todos, {
-                id: this.state.todos.length + 1,
+    async componentDidMount() {
+        try {
+
+            const todos = await api.all();
+
+            this.setState({ todos });
+
+        } catch(error) {
+            console.error(error);
+        }
+    }
+
+    async onSubmit(text) {
+
+        try {
+
+            const todo = {
+                id: uuidv4(),
                 text: text,
                 completed: false
-            }]
-        });
+            };
+
+            api.add(todo);
+
+            this.setState({ todos: [...this.state.todos, todo] });
+
+        } catch(error) {
+            console.error(error);
+        }
     }
 
     render() {
