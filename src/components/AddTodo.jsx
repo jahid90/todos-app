@@ -19,7 +19,13 @@ export default class AddTodo extends Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        console.log('State is', JSON.stringify(this.state, null, 2));
+        const { text } = this.state;
+
+        if (text.trim().length === 0) {
+            return;
+        }
+
+        this.props.onSubmit(text);
 
         this.setState({ text: '' });
     }
