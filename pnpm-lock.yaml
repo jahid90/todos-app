@@ -6,6 +6,7 @@ dependencies:
   '@testing-library/react': 9.5.0_react-dom@16.13.1+react@16.13.1
   '@testing-library/user-event': 7.2.1
   axios: 0.19.2
+  event-emitter3: 1.0.4
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
   react-scripts: 3.4.0
@@ -5292,6 +5293,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  /event-emitter3/1.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-4BYGaLVnHPjuFuzQka8NOjUy48esIQ1Wb5alv78AHYVQcNRU1Nt8aBemzyYuG9awwd4hry1yPQBjkUqVA6FUmg==
   /eventemitter3/4.0.4:
     dev: false
     resolution:
@@ -12347,6 +12352,7 @@ specifiers:
   '@testing-library/react': ^9.3.2
   '@testing-library/user-event': ^7.1.2
   axios: ^0.19.2
+  event-emitter3: ^1.0.4
   react: ^16.12.0
   react-dom: ^16.12.0
   react-scripts: 3.4.0

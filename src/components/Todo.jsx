@@ -5,6 +5,9 @@ import DoneIcon from '@material-ui/icons/Done';
 import HistoryIcon from '@material-ui/icons/History';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
+import { Commands } from '../library/Events';
+import Emitter from '../library/Emitter';
+
 export default class Todo extends Component {
 
     constructor(props) {
@@ -15,11 +18,11 @@ export default class Todo extends Component {
     }
 
     handleDelete() {
-        this.props.onDelete(this.props.todo.id);
+        Emitter.emit(Commands.DELETE_TODO, this.props.todo.id);
     }
 
     handleToggle() {
-        this.props.onToggle(this.props.todo.id);
+        Emitter.emit(Commands.TOGGLE_TODO, this.props.todo.id);
     }
 
     render() {

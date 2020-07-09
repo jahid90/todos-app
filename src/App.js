@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import './App.css';
 
+import { Events, Commands } from './library/Events';
+import Emitter from './library/Emitter';
+import AppHelper from './library/AppHelper';
+
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
-
-import api from './services/todos';
 
 export default class App extends Component {
 
@@ -17,78 +18,52 @@ export default class App extends Component {
             todos: []
         }
 
-        this.onSubmit = this.onSubmit.bind(this);
-        this.onDelete = this.onDelete.bind(this);
-        this.onToggle = this.onToggle.bind(this);
+        this.appHelper = new AppHelper();
+
+        this.toggleTodo = this.toggleTodo.bind(this);
+        this.addTodo = this.addTodo.bind(this);
+        this.deleteTodo = this.deleteTodo.bind(this);
+        this.updateTodos = this.updateTodos.bind(this);
+
+        Emitter.on(Events.TODO_ADDED, this.addTodo);
+        Emitter.on(Events.TODO_TOGGLED, this.toggleTodo);
+        Emitter.on(Events.TODO_DELETED, this.deleteTodo);
+        Emitter.on(Events.TODOS_FETCHED, this.updateTodos);
     }
 
     async componentDidMount() {
-        try {
-
-            const todos = await api.all();
-
-            this.setState({ todos });
-
-        } catch(error) {
-            console.error(error);
-        }
+        Emitter.emit(Commands.FETCH);
     }
 
-    async onSubmit(text) {
-        try {
-
-            const todo = {
-                id: uuidv4(),
-                text: text,
-                completed: false
-            };
-
-            await api.add(todo);
-
-            this.setState({ todos: [...this.state.todos, todo] });
-
-        } catch(error) {
-            console.error(error);
-        }
+    addTodo(todo) {
+        this.setState({ todos: [...this.state.todos, todo] });
     }
 
-    async onDelete(id) {
-        try {
+    toggleTodo(id) {
 
-            await api.delete(id);
+        const updatedTodos = this.state.todos.map(item => item.id === id
+            ? { id: item.id, text: item.text, completed: !item.completed }
+            : item);
 
-            const filteredTodos = this.state.todos.filter(todo => id !== todo.id);
-            this.setState({ todos: filteredTodos });
-
-        } catch (error) {
-            console.error(error);
-        }
+        this.setState({ todos: updatedTodos });
     }
 
-    async onToggle(id) {
-        try {
+    deleteTodo(id) {
 
-            await api.toggle(id);
+        const updatedTodos = this.state.todos.filter(item => item.id !== id);
 
-            const updatedTodos = this.state.todos.map(todo => id === todo.id
-                ? { id: todo.id, text: todo.text, completed: !todo.completed }
-                : todo);
+        this.setState({ todos: updatedTodos });
+    }
 
-            this.setState({ todos: updatedTodos });
-
-        } catch(error) {
-            console.error(error);
-        }
+    updateTodos(todos) {
+        this.setState({ todos });
     }
 
     render() {
         return (
             <div className='app'>
-                <AddTodo onSubmit={ this.onSubmit }/>
-                <TodoList
-                        todos={ this.state.todos }
-                        onDelete={ this.onDelete }
-                        onToggle={ this.onToggle } />
+                <AddTodo />
+                <TodoList todos={ this.state.todos } />
             </div>
         )
     }

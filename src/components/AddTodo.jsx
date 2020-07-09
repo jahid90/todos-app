@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { Commands } from '../library/Events';
+import Emitter from '../library/Emitter';
+
 export default class AddTodo extends Component {
     constructor(props) {
         super(props);
@@ -17,6 +20,7 @@ export default class AddTodo extends Component {
     }
 
     handleSubmit(event) {
+
         event.preventDefault();
 
         const { text } = this.state;
@@ -25,7 +29,7 @@ export default class AddTodo extends Component {
             return;
         }
 
-        this.props.onSubmit(text);
+        Emitter.emit(Commands.ADD_TODO, text);
 
         this.setState({ text: '' });
     }
@@ -35,6 +39,7 @@ export default class AddTodo extends Component {
             <div className='add-todo-form'>
                 <h4>Add a todo</h4>
                 <form onSubmit={ this.handleSubmit }>
+
                     <input type='text' name='todo'
                             placeholder='Todo text'
                             value={ this.state.text }
@@ -42,6 +47,7 @@ export default class AddTodo extends Component {
                             onChange={ this.handleChange } />
 
                     <input type='submit' value='Add Todo' className='submit-btn' />
+
                 </form>
             </div>
         )
