@@ -1,6 +1,6 @@
 package io.jahiduls.todos.processors;
 
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.dao.TodoService;
 import io.jahiduls.todos.queries.Query;
 import io.jahiduls.todos.queries.QueryResult;
 import lombok.AllArgsConstructor;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class QueryProcessor {
 
-    private final TodoRepository repository;
+    private final TodoService service;
 
     public QueryResult process(final Query query) {
-        return query.handle(repository);
+        return query.handle(service);
     }
 
 }
