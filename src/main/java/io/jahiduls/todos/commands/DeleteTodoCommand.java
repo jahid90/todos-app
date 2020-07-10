@@ -1,6 +1,6 @@
 package io.jahiduls.todos.commands;
 
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.dao.TodoService;
 import lombok.Builder;
 import lombok.ToString;
 
@@ -11,7 +11,8 @@ public class DeleteTodoCommand implements Command {
     private final String id;
 
     @Override
-    public void execute(final TodoRepository repository) {
-        repository.deleteById(id);
+    public void execute(final TodoService service) {
+        service.deleteTodoById(id);
     }
+
 }
