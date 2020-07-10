@@ -68,3 +68,9 @@ body {
 .todo .completed {
   text-decoration: line-through;
 }
+
+.filter {
+  border: thin solid black;
+  border-radius: 5px;
+  padding: 10px;
+}

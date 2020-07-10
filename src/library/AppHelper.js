@@ -13,8 +13,9 @@ class AppHelper {
         Emitter.on(Commands.ADD_TODO, this.addTodo);
         Emitter.on(Commands.DELETE_TODO, this.deleteTodo);
         Emitter.on(Commands.TOGGLE_TODO, this.toggleTodo);
-
-        console.log('app-helper initialized');
+        Emitter.on(Commands.FILTER_ALL, this.fetchTodos);
+        Emitter.on(Commands.FILTER_COMPLETED, this.fetchCompletedTodos);
+        Emitter.on(Commands.FILTER_INCOMPLETE, this.fetchIncompleteTodos);
     }
 
     fetchTodos = async () => {
@@ -24,9 +25,9 @@ class AppHelper {
 
             const todos = await api.all();
 
-            Emitter.emit(Events.TODOS_FETCHED, todos);
+            Emitter.emit(Events.TODOS_UPDATED, todos);
 
-        } catch(error) {
+        } catch (error) {
             console.error(error);
         }
     }
@@ -73,6 +74,34 @@ class AppHelper {
             await api.toggle(id);
 
             Emitter.emit(Events.TODO_TOGGLED, id);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    fetchCompletedTodos = async () => {
+        try {
+
+            console.log('executing get completed');
+
+            const todos = await api.completed();
+
+            Emitter.emit(Events.TODOS_UPDATED, todos);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    fetchIncompleteTodos = async () => {
+        try {
+
+            console.log('executing get incomplete');
+
+            const todos = await api.incomplete();
+
+            Emitter.emit(Events.TODOS_UPDATED, todos);
 
         } catch (error) {
             console.error(error);

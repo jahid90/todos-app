@@ -1,5 +1,5 @@
 export const Events = {
-    TODOS_FETCHED: 'todos-fetched',
+    TODOS_UPDATED: 'todos-updated',
     TODO_ADDED: 'todo-added',
     TODO_TOGGLED: 'todo-toggled',
     TODO_DELETED: 'todo-deleted'
@@ -10,6 +10,9 @@ export const Commands = {
     ADD_TODO: 'add-todo',
     TOGGLE_TODO: 'toggle-todo',
     DELETE_TODO: 'delete-todo',
+    FILTER_ALL: 'filter-all',
+    FILTER_COMPLETED: 'filter-completed',
+    FILTER_INCOMPLETE: 'filter-incomplete'
 }
 
 export default { Events, Commands };

@@ -28,7 +28,7 @@ export default class App extends Component {
         Emitter.on(Events.TODO_ADDED, this.addTodo);
         Emitter.on(Events.TODO_TOGGLED, this.toggleTodo);
         Emitter.on(Events.TODO_DELETED, this.deleteTodo);
-        Emitter.on(Events.TODOS_FETCHED, this.updateTodos);
+        Emitter.on(Events.TODOS_UPDATED, this.updateTodos);
     }
 
     async componentDidMount() {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Todo from './Todo';
+import FilterTodos from './FilterTodos';
 
 export default class TodoList extends Component {
 
@@ -9,12 +10,14 @@ export default class TodoList extends Component {
         const { todos } = this.props;
 
         return (
-
-            <div className='todos'>
-                <h4>All Todos</h4>
-                {
-                    todos.map(todo => <Todo todo={ todo } key={ todo.id } />)
-                }
+            <div>
+                <FilterTodos />
+                <div className='todos'>
+                    <h4>All Todos</h4>
+                    {
+                        todos.map(todo => <Todo todo={ todo } key={ todo.id } />)
+                    }
+                </div>
             </div>
         )
     }

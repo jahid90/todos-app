@@ -10,7 +10,27 @@ const getAllTodos = async () => {
         throw new Error(response.error);
     }
 
-    console.debug("Received:", JSON.stringify(response.data, null, 2));
+    return response.data;
+}
+
+const getCompletedTodos = async () => {
+
+    const response = await axios.get(`${baseUrl}/todos?completed=true`);
+
+    if (response.error) {
+        throw new Error(response.error);
+    }
+
+    return response.data;
+}
+
+const getIncompleteTodos = async () => {
+
+    const response = await axios.get(`${baseUrl}/todos?completed=false`);
+
+    if (response.error) {
+        throw new Error(response.error);
+    }
 
     return response.data;
 }
@@ -44,6 +64,8 @@ const toggleTodo = async (id) => {
 
 const api = {
     all: getAllTodos,
+    completed: getCompletedTodos,
+    incomplete: getIncompleteTodos,
     add: addTodo,
     delete: deleteTodo,
     toggle: toggleTodo

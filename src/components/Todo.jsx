@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
 import DoneIcon from '@material-ui/icons/Done';
 import HistoryIcon from '@material-ui/icons/History';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
@@ -38,11 +39,11 @@ export default class Todo extends Component {
                     </Grid>
                     <Grid item xs={1}>
                         { todo.completed
-                            ? <HistoryIcon className='icon' onClick={ this.handleToggle } />
-                            : <DoneIcon className='icon' onClick={ this.handleToggle } /> }
+                            ? <IconButton aria-label="mark incomplete"><HistoryIcon onClick={ this.handleToggle } /></IconButton>
+                            : <IconButton aria-label="mark completed"><DoneIcon onClick={ this.handleToggle } /></IconButton> }
                     </Grid>
                     <Grid item xs={1}>
-                        <DeleteForeverIcon className='icon' onClick={ this.handleDelete } />
+                        <IconButton aria-label="delete"><DeleteForeverIcon onClick={ this.handleDelete } /></IconButton>
                     </Grid>
                 </Grid>
             </div>
