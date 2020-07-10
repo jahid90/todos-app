@@ -27,4 +27,12 @@ public class TodoService {
         return repository.findAllByIsCompleted(completed);
     }
 
+    public void saveTodo(final Todo todo) {
+        repository.save(todo);
+    }
+
+    public void deleteTodoById(final String id) {
+        repository.deleteById(id);
+    }
+
 }

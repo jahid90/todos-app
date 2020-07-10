@@ -1,7 +1,7 @@
 package io.jahiduls.todos.commands;
 
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.dao.TodoService;
 
 public interface Command {
-    void execute(TodoRepository repository);
+    void execute(final TodoService service);
 }

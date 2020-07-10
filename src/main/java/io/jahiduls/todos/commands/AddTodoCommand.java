@@ -1,6 +1,6 @@
 package io.jahiduls.todos.commands;
 
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.dao.TodoService;
 import io.jahiduls.todos.resources.TodoResource;
 import lombok.Builder;
 import lombok.ToString;
@@ -14,7 +14,8 @@ public class AddTodoCommand implements Command {
     private final TodoResource resource;
 
     @Override
-    public void execute(final TodoRepository repository) {
-        repository.save(resource.toTodo());
+    public void execute(final TodoService service) {
+        service.saveTodo(resource.toTodo());
     }
+
 }
