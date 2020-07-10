@@ -6,23 +6,23 @@ import org.springframework.stereotype.Component;
 public final class QueryFactory {
 
     public Query getAll() {
-        return GetAllQuery.builder().build();
+        return GetAllTodosQuery.builder().build();
     }
 
     public Query getAllCompleted() {
-        return GetAllCompletedQuery.builder().build();
+        return GetAllCompletedTodosQuery.builder().build();
     }
 
     public Query getAllIncomplete() {
-        return GetAllIncompleteQuery.builder().build();
+        return GetAllIncompleteTodosQuery.builder().build();
     }
 
     public Query getFiltered(final boolean isCompleted) {
-        return GetFilteredQuery.builder().wantCompleted(isCompleted).build();
+        return GetFilteredTodosQuery.builder().wantCompleted(isCompleted).build();
     }
 
     public Query getOne(final String id) {
-        return GetOneQuery.builder().id(id).build();
+        return GetOneTodoQuery.builder().id(id).build();
     }
 
 }

@@ -4,15 +4,15 @@ import io.jahiduls.todos.dao.TodoService;
 import lombok.Builder;
 
 @Builder
-public class GetAllCompletedQuery implements Query {
+public class GetAllIncompleteTodosQuery implements Query {
 
-    private static final boolean COMPLETED = true;
+    private static final boolean INCOMPLETE = false;
 
     @Override
     public QueryResult handle(final TodoService service) {
         final QueryResult result = new QueryResult();
 
-        result.data = service.getAllByCompleted(COMPLETED);
+        result.data = service.getAllByCompleted(INCOMPLETE);
         result.error = "";
 
         return result;

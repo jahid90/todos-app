@@ -7,19 +7,19 @@ import org.springframework.stereotype.Component;
 public final class CommandFactory {
 
     public Command addCommand(final TodoResource resource) {
-        return AddCommand.builder().resource(resource).build();
+        return AddTodoCommand.builder().resource(resource).build();
     }
 
     public Command editCommand(final TodoResource resource) {
-        return EditCommand.builder().resource(resource).build();
+        return EditTodoCommand.builder().resource(resource).build();
     }
 
     public Command deleteCommand(final String id) {
-        return DeleteCommand.builder().id(id).build();
+        return DeleteTodoCommand.builder().id(id).build();
     }
 
     public Command toggleCommand(final String id) {
-        return ToggleCommand.builder().id(id).build();
+        return ToggleTodoCommand.builder().id(id).build();
     }
 
 }

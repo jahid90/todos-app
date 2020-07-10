@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class TodosQueryController {
 
-    private final QueryProcessor queryProcessor;
+    private final QueryProcessor processor;
     private final QueryFactory factory;
 
     @GetMapping("/todos")
@@ -44,7 +44,7 @@ public class TodosQueryController {
 
         log.info("Running full query.");
 
-        final QueryResult result = queryProcessor.process(factory.getAll());
+        final QueryResult result = processor.process(factory.getAll());
         final List<Todo> todos = (List<Todo>) result.data;
 
         final List<TodoResource> response = todos.stream().map(TodoResource::fromTodo).collect(Collectors.toList());
@@ -58,7 +58,7 @@ public class TodosQueryController {
 
         log.info("Param: [isCompleted: {}] is present. Running filtered query.", isCompleted);
 
-        final QueryResult result = queryProcessor.process(factory.getFiltered(isCompleted));
+        final QueryResult result = processor.process(factory.getFiltered(isCompleted));
         final List<Todo> todos = (List<Todo>) result.data;
 
         final List<TodoResource> response = todos.stream().map(TodoResource::fromTodo).collect(Collectors.toList());
@@ -73,7 +73,7 @@ public class TodosQueryController {
 
         log.info("[GET ONE] [{}] request received.", id);
 
-        final QueryResult result = queryProcessor.process(factory.getOne(id));
+        final QueryResult result = processor.process(factory.getOne(id));
         final Optional<Todo> maybeTodo = (Optional<Todo>) result.data;
 
         if (maybeTodo.isEmpty()) {

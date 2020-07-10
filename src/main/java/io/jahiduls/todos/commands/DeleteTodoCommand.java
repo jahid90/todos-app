@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @ToString
 @Builder
-public class DeleteCommand implements Command {
+public class DeleteTodoCommand implements Command {
 
     private final String id;
 

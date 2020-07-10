@@ -5,7 +5,7 @@ import lombok.Builder;
 import org.springframework.cache.annotation.Cacheable;
 
 @Builder
-public class GetAllQuery implements Query {
+public class GetAllTodosQuery implements Query {
 
     @Override
     @Cacheable("todos")
