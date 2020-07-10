@@ -13,10 +13,6 @@ public class ClientException extends RuntimeException {
         super(message);
     }
 
-    public static ClientException badRequest() {
-        return new BadRequest();
-    }
-
     public static ClientException badRequest(final String message) {
         return new BadRequest(message);
     }

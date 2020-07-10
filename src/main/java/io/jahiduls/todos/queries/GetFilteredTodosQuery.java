@@ -21,6 +21,7 @@ public class GetFilteredTodosQuery implements Query {
 
             return query.handle(service);
         }
+
     }
 
 }
