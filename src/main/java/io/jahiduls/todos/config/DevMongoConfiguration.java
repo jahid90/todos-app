@@ -16,8 +16,6 @@ public class DevMongoConfiguration {
     private static final String DB_NAME = "todos";
     private static final String DB_USER = "admin";
     private static final String DB_PASSWORD = "admin_password";
-    private static final String DATA_COLLECTION_NAME = "todo";
-    private static final String CONFIG_COLLECTION_NAME = "config";
 
     @Bean
     public MongoClient mongoClient() {
