@@ -1,7 +1,7 @@
 package io.jahiduls.todos.processors;
 
 import io.jahiduls.todos.commands.Command;
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.services.TodoService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class TodoCommandProcessor implements CommandProcessor {
 
-    private final TodoRepository repository;
+    private final TodoService service;
 
     @Override
     public void process(final Command command) {
-        command.execute(repository);
+        command.execute(service);
     }
 
 }

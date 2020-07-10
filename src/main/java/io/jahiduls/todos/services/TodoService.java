@@ -1,5 +1,7 @@
-package io.jahiduls.todos.dao;
+package io.jahiduls.todos.services;
 
+import io.jahiduls.todos.dao.Todo;
+import io.jahiduls.todos.dao.TodoRepository;
 import java.util.List;
 import java.util.Optional;
 import lombok.AllArgsConstructor;

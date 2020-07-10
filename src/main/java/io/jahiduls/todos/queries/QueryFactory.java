@@ -9,14 +9,6 @@ public final class QueryFactory {
         return GetAllTodosQuery.builder().build();
     }
 
-    public Query getAllCompleted() {
-        return GetAllCompletedTodosQuery.builder().build();
-    }
-
-    public Query getAllIncomplete() {
-        return GetAllIncompleteTodosQuery.builder().build();
-    }
-
     public Query getFiltered(final boolean isCompleted) {
         return GetFilteredTodosQuery.builder().wantCompleted(isCompleted).build();
     }

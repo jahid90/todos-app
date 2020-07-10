@@ -1,6 +1,6 @@
 package io.jahiduls.todos.commands;
 
-import io.jahiduls.todos.dao.TodoService;
+import io.jahiduls.todos.services.TodoService;
 import lombok.Builder;
 import lombok.ToString;
 
