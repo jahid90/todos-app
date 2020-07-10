@@ -3,6 +3,7 @@ package io.jahiduls.todos.controller;
 import io.jahiduls.todos.commands.CommandFactory;
 import io.jahiduls.todos.commands.CommandBus;
 import io.jahiduls.todos.resources.TodoResource;
+import io.jahiduls.todos.validators.TodoValidator;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,7 @@ public class TodosCommandController {
 
     private final CommandBus commandBus;
     private final CommandFactory factory;
+    private final TodoValidator validator;
 
     @PostMapping("/todos")
     @ResponseStatus(HttpStatus.CREATED)
@@ -30,6 +32,7 @@ public class TodosCommandController {
 
         log.info("[{}] - add request received.", resource.getId());
 
+        validator.validate(resource);
         commandBus.emit(factory.addCommand(resource));
 
         log.info("[{}] - command emitted to add a todo", resource.getId());
@@ -40,7 +43,8 @@ public class TodosCommandController {
 
         log.info("[{}] - edit request received", resource.getId());
 
-        commandBus.emit(factory.editCommand(resource));
+        validator.validate(resource);
+        commandBus.emit(factory.updateCommand(resource));
 
         log.info("[{}] - command emitted to edit the todo.", resource.getId());
     }

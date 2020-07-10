@@ -10,8 +10,8 @@ public final class CommandFactory {
         return AddTodoCommand.builder().resource(resource).build();
     }
 
-    public Command editCommand(final TodoResource resource) {
-        return EditTodoCommand.builder().resource(resource).build();
+    public Command updateCommand(final TodoResource resource) {
+        return UpdateTodoCommand.builder().resource(resource).build();
     }
 
     public Command deleteCommand(final String id) {
