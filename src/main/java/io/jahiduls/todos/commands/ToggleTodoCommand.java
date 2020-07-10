@@ -5,7 +5,9 @@ import io.jahiduls.todos.exceptions.ClientException;
 import io.jahiduls.todos.services.TodoService;
 import java.util.Optional;
 import lombok.Builder;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Builder
 public class ToggleTodoCommand implements Command {
 
@@ -23,6 +25,9 @@ public class ToggleTodoCommand implements Command {
         final Optional<Todo> updatedTodo = maybeTodo.map(todo -> new Todo(todo.id, todo.text, !todo.isCompleted));
 
         service.saveTodo(updatedTodo.get());
+
+        log.info("{} executed successfully", this.getClass().getSimpleName());
+
     }
 
 }

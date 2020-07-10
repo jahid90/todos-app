@@ -1,6 +1,6 @@
-package io.jahiduls.todos.commands;
+package io.jahiduls.todos.processors;
 
-import io.jahiduls.todos.processors.CommandProcessor;
+import io.jahiduls.todos.commands.Command;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public final class CommandBus {
 
-    private final CommandProcessor commandProcessor;
+    private final CommandProcessor processor;
 
     public void emit(final Command command) {
-        commandProcessor.process(command);
+        processor.process(command);
     }
 
 }
