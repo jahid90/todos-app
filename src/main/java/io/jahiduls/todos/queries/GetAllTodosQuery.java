@@ -2,13 +2,11 @@ package io.jahiduls.todos.queries;
 
 import io.jahiduls.todos.services.TodoService;
 import lombok.Builder;
-import org.springframework.cache.annotation.Cacheable;
 
 @Builder
 public class GetAllTodosQuery implements Query {
 
     @Override
-    @Cacheable("todos")
     public QueryResult handle(final TodoService service) {
 
         final QueryResult result = new QueryResult();
