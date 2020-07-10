@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @ToString
 @Builder
-public class AddCommand implements Command {
+public class AddTodoCommand implements Command {
 
     private final TodoResource resource;
 

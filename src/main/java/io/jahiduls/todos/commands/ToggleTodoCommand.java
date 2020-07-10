@@ -7,7 +7,7 @@ import java.util.Optional;
 import lombok.Builder;
 
 @Builder
-public class ToggleCommand implements Command {
+public class ToggleTodoCommand implements Command {
 
     private final String id;
 

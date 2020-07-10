@@ -4,7 +4,7 @@ import io.jahiduls.todos.dao.TodoService;
 import lombok.Builder;
 
 @Builder
-public class GetFilteredQuery implements Query {
+public class GetFilteredTodosQuery implements Query {
 
     private final boolean wantCompleted;
 
@@ -12,12 +12,12 @@ public class GetFilteredQuery implements Query {
     public QueryResult handle(final TodoService service) {
 
         if (wantCompleted) {
-            final GetAllCompletedQuery query = GetAllCompletedQuery.builder().build();
+            final GetAllCompletedTodosQuery query = GetAllCompletedTodosQuery.builder().build();
 
             return query.handle(service);
 
         } else {
-            GetAllIncompleteQuery query = GetAllIncompleteQuery.builder().build();
+            GetAllIncompleteTodosQuery query = GetAllIncompleteTodosQuery.builder().build();
 
             return query.handle(service);
         }

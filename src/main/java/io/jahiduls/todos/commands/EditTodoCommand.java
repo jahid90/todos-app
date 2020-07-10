@@ -8,7 +8,7 @@ import java.util.Optional;
 import lombok.Builder;
 
 @Builder
-public class EditCommand implements Command {
+public class EditTodoCommand implements Command {
 
     private final TodoResource resource;
 

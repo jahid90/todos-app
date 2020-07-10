@@ -4,7 +4,7 @@ import io.jahiduls.todos.dao.TodoService;
 import lombok.Builder;
 
 @Builder
-public class GetOneQuery implements Query {
+public class GetOneTodoQuery implements Query {
 
     private final String id;
 
