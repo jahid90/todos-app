@@ -1,9 +1,9 @@
 package io.jahiduls.todos.commands;
 
 import io.jahiduls.todos.dao.Todo;
-import io.jahiduls.todos.dao.TodoService;
 import io.jahiduls.todos.exceptions.ClientException;
 import io.jahiduls.todos.resources.TodoResource;
+import io.jahiduls.todos.services.TodoService;
 import java.util.Optional;
 import lombok.Builder;
 

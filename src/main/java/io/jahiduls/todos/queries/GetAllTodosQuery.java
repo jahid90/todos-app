@@ -1,6 +1,6 @@
 package io.jahiduls.todos.queries;
 
-import io.jahiduls.todos.dao.TodoService;
+import io.jahiduls.todos.services.TodoService;
 import lombok.Builder;
 import org.springframework.cache.annotation.Cacheable;
 
@@ -18,4 +18,5 @@ public class GetAllTodosQuery implements Query {
 
         return result;
     }
+
 }

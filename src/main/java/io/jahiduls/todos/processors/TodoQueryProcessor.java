@@ -1,8 +1,8 @@
 package io.jahiduls.todos.processors;
 
-import io.jahiduls.todos.dao.TodoService;
 import io.jahiduls.todos.queries.Query;
 import io.jahiduls.todos.queries.QueryResult;
+import io.jahiduls.todos.services.TodoService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
