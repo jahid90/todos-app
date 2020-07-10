@@ -1,7 +1,7 @@
 package io.jahiduls.todos.queries;
 
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.dao.TodoService;
 
 public interface Query {
-    QueryResult handle(TodoRepository repository);
+    QueryResult handle(final TodoService service);
 }

@@ -1,17 +1,19 @@
 package io.jahiduls.todos.queries;
 
-import io.jahiduls.todos.dao.TodoRepository;
+import io.jahiduls.todos.dao.TodoService;
 import lombok.Builder;
+import org.springframework.cache.annotation.Cacheable;
 
 @Builder
 public class GetAllQuery implements Query {
 
     @Override
-    public QueryResult handle(final TodoRepository repository) {
+    @Cacheable("todos")
+    public QueryResult handle(final TodoService service) {
 
         final QueryResult result = new QueryResult();
 
-        result.data = repository.findAll();
+        result.data = service.getAll();
         result.error = "";
 
         return result;
