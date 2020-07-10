@@ -1,7 +1,7 @@
 package io.jahiduls.todos.controller;
 
 import io.jahiduls.todos.commands.CommandFactory;
-import io.jahiduls.todos.commands.CommandBus;
+import io.jahiduls.todos.processors.CommandBus;
 import io.jahiduls.todos.resources.TodoResource;
 import io.jahiduls.todos.validators.TodoValidator;
 import lombok.AllArgsConstructor;

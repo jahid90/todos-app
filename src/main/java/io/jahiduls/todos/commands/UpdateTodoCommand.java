@@ -6,7 +6,9 @@ import io.jahiduls.todos.resources.TodoResource;
 import io.jahiduls.todos.services.TodoService;
 import java.util.Optional;
 import lombok.Builder;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Builder
 public class UpdateTodoCommand implements Command {
 
@@ -23,6 +25,9 @@ public class UpdateTodoCommand implements Command {
         }
 
         service.saveTodo(resource.toTodo());
+
+        log.info("{} executed successfully", this.getClass().getSimpleName());
+
     }
 
 }

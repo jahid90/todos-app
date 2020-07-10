@@ -15,7 +15,11 @@ public class AddTodoCommand implements Command {
 
     @Override
     public void execute(final TodoService service) {
+
         service.saveTodo(resource.toTodo());
+
+        log.info("{} executed successfully", this.getClass().getSimpleName());
+
     }
 
 }

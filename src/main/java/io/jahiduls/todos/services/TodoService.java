@@ -7,6 +7,7 @@ import java.util.Optional;
 import lombok.AllArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,12 +31,18 @@ public class TodoService {
         return repository.findAllByIsCompleted(completed);
     }
 
-    @CacheEvict(value = "todo", key = "#todo.id")
+    @Caching(evict = {
+            @CacheEvict(value = "todo", key = "#todo.id"),
+            @CacheEvict(value = "todos", allEntries = true)
+    })
     public void saveTodo(final Todo todo) {
         repository.save(todo);
     }
 
-    @CacheEvict(value = "todo")
+    @Caching(evict = {
+            @CacheEvict("todo"),
+            @CacheEvict(value = "todos", allEntries = true)
+    })
     public void deleteTodoById(final String id) {
         repository.deleteById(id);
     }
