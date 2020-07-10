@@ -10,7 +10,7 @@ export default class TodoList extends Component {
         const { todos } = this.props;
 
         return (
-            <div>
+            <div className='todos-container'>
                 <FilterTodos />
                 <div className='todos'>
                     <h4>All Todos</h4>

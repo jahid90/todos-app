@@ -12,65 +12,54 @@ body {
 .app {
   width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .add-todo-form {
   width: 100%;
   border: thin solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 10px;
-  padding: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+h4 {
+  margin: 15px;
   text-align: center;
 }
 
 .add-todo-form input {
   display: block;
-  margin-bottom: 10px;
 }
 
 .add-todo-form .text-field {
   width: 100%;
-  padding: 15px;
-  border: thin solid black;
-  border-radius: 5px;
-}
-
-.add-todo-form .submit-btn {
   padding: 10px;
-  border-radius: 5px;
-}
-
-.add-todo-form .text-field:focus {
-  border: thin solid grey;
 }
 
 .todos {
   width: 100%;
   border: thin solid black;
-  padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .todo {
-  border-radius: 5px;
+  border-top: thin solid black;
   padding: 10px;
-  border: thin solid black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: left;
 }
 
 .todo .icon {
   cursor: pointer;
 }
 
-.todo .completed {
+.todo .completed span {
   text-decoration: line-through;
 }
 
 .filter {
   border: thin solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
+  text-align: center;
 }

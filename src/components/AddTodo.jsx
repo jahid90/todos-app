@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 import { Commands } from '../library/Events';
 import Emitter from '../library/Emitter';
 
@@ -40,13 +43,13 @@ export default class AddTodo extends Component {
                 <h4>Add a todo</h4>
                 <form onSubmit={ this.handleSubmit }>
 
-                    <input type='text' name='todo'
+                    <TextField variant='outlined'
+                            className='text-field'
                             placeholder='Todo text'
                             value={ this.state.text }
-                            className='text-field'
                             onChange={ this.handleChange } />
 
-                    <input type='submit' value='Add Todo' className='submit-btn' />
+                    <Button variant='contained' onClick={ this.handleSubmit }>Add Todo</Button>
 
                 </form>
             </div>

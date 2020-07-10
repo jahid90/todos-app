@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Grid from '@material-ui/core/Grid';
+import Chip from '@material-ui/core/Chip';
 import IconButton from '@material-ui/core/IconButton';
 import DoneIcon from '@material-ui/icons/Done';
 import HistoryIcon from '@material-ui/icons/History';
@@ -33,9 +34,9 @@ export default class Todo extends Component {
 
         return (
             <div className='todo'>
-                <Grid container spacing={3}>
-                    <Grid item xs={10} className={ classes }>
-                        { todo.text }
+                <Grid container spacing={3} alignItems='center' justify='flex-start'>
+                    <Grid item xs={10}>
+                        <Chip label={ todo.text } variant='outlined' className={ classes } />
                     </Grid>
                     <Grid item xs={1}>
                         { todo.completed
