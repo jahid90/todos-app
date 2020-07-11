@@ -1,8 +1,8 @@
 package io.jahiduls.todos.queries;
 
-public final class QueryResult {
+public final class QueryResult<D, E> {
 
-    public Object data;
-    public Object error;
+    public D data;
+    public E error;
 
 }
