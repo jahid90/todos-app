@@ -32,7 +32,7 @@ export default class Todo extends Component {
         const { todo } = this.props;
         console.info('Rendering:', JSON.stringify(todo, null, 2));
 
-        const classes = todo.isCompleted ? 'completed' : '';
+        const classes = todo.completed ? 'completed' : '';
 
         return (
             <div className='todo'>
@@ -41,7 +41,7 @@ export default class Todo extends Component {
                         <Chip label={ todo.text } variant='outlined' className={ classes } />
                     </Grid>
                     <Grid item xs={1}>
-                        { todo.isCompleted
+                        { todo.completed
                             ? <IconButton aria-label="mark incomplete"><HistoryIcon onClick={ this.handleToggle } /></IconButton>
                             : <IconButton aria-label="mark completed"><DoneIcon onClick={ this.handleToggle } /></IconButton> }
                     </Grid>
