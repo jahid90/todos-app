@@ -5,7 +5,7 @@ import App from './App';
 
 // Disable debug logs in production
 if (process.env.NODE_ENV === 'production') {
-    console.debug = (args) => {};
+    console.info = (args) => {};
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));

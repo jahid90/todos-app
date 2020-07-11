@@ -21,7 +21,7 @@ class AppHelper {
     fetchTodos = async () => {
         try {
 
-            console.debug('executing fetch all');
+            console.info('executing fetch all');
 
             const todos = await api.all();
 
@@ -35,7 +35,7 @@ class AppHelper {
     addTodo = async (text) => {
         try {
 
-            console.debug('executing add one');
+            console.info('executing add one');
 
             const todo = {
                 id: uuidv4(),
@@ -55,7 +55,7 @@ class AppHelper {
     deleteTodo = async (id) => {
         try {
 
-            console.debug('executing delete one');
+            console.info('executing delete one');
 
             await api.delete(id);
 
@@ -69,7 +69,7 @@ class AppHelper {
     toggleTodo = async (id) => {
         try {
 
-            console.debug('executing toggle one');
+            console.info('executing toggle one');
 
             await api.toggle(id);
 
@@ -83,7 +83,7 @@ class AppHelper {
     fetchCompletedTodos = async () => {
         try {
 
-            console.debug('executing get completed');
+            console.info('executing get completed');
 
             const todos = await api.completed();
 
@@ -97,7 +97,7 @@ class AppHelper {
     fetchIncompleteTodos = async () => {
         try {
 
-            console.debug('executing get incomplete');
+            console.info('executing get incomplete');
 
             const todos = await api.incomplete();
 

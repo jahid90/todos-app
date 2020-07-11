@@ -5,25 +5,25 @@ const eventEmitter = new EventEmitter();
 const Emitter = {
     on: (event, fn) => {
 
-        console.debug(`[${event}] - listener attached.`);
+        console.info(`[${event}] - listener attached.`);
 
         eventEmitter.on(event, fn);
     },
     once: (event, fn) => {
 
-        console.debug(`[${event}] - one-time listened attached.`);
+        console.info(`[${event}] - one-time listened attached.`);
 
         eventEmitter.once(event, fn);
     },
     off: (event, fn) => {
 
-        console.debug(`[${event}] - listener detached.`);
+        console.info(`[${event}] - listener detached.`);
 
         eventEmitter.off(event, fn);
     },
     emit: (event, payload) => {
 
-        console.debug(`[${event}] - payload: ${JSON.stringify(payload, null, 2)}`);
+        console.info(`[${event}] - payload: ${JSON.stringify(payload, null, 2)}`);
 
         eventEmitter.emit(event, payload);
     }
