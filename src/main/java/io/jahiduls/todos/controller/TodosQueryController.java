@@ -44,12 +44,11 @@ public class TodosQueryController {
 
         log.info("Running full query.");
 
-        final QueryResult result = processor.process(factory.getAll());
-        final List<Todo> todos = (List<Todo>) result.data;
-
+        final QueryResult<List<Todo>, String> result = processor.process(factory.getAll());
+        final List<Todo> todos = result.data;
         final List<TodoResource> response = todos.stream().map(TodoResource::fromTodo).collect(Collectors.toList());
 
-        log.info("Retrieved: {}", response);
+        log.info("Response: {}", response);
 
         return response;
     }
@@ -58,12 +57,11 @@ public class TodosQueryController {
 
         log.info("Param: [isCompleted: {}] is present. Running filtered query.", isCompleted);
 
-        final QueryResult result = processor.process(factory.getFiltered(isCompleted));
-        final List<Todo> todos = (List<Todo>) result.data;
-
+        final QueryResult<List<Todo>, String> result = processor.process(factory.getFiltered(isCompleted));
+        final List<Todo> todos = result.data;
         final List<TodoResource> response = todos.stream().map(TodoResource::fromTodo).collect(Collectors.toList());
 
-        log.info("Retrieved: {}", response);
+        log.info("Response: {}", response);
 
         return response;
     }
@@ -73,8 +71,8 @@ public class TodosQueryController {
 
         log.info("[GET ONE] [{}] request received.", id);
 
-        final QueryResult result = processor.process(factory.getOne(id));
-        final Optional<Todo> maybeTodo = (Optional<Todo>) result.data;
+        final QueryResult<Optional<Todo>, String> result = processor.process(factory.getOne(id));
+        final Optional<Todo> maybeTodo = result.data;
 
         if (maybeTodo.isEmpty()) {
             throw ClientException.notFound();
@@ -82,7 +80,7 @@ public class TodosQueryController {
 
         final TodoResource response = TodoResource.fromTodo(maybeTodo.get());
 
-        log.info("Retrieved: {}", response);
+        log.info("Response: {}", response);
 
         return response;
     }
