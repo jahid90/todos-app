@@ -1,6 +1,7 @@
 package io.jahiduls.todos.processors;
 
 import io.jahiduls.todos.commands.Command;
+import io.jahiduls.todos.commands.CommandFactory;
 import io.jahiduls.todos.services.TodoService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -14,12 +15,15 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class TodoCommandProcessor implements CommandProcessor {
 
+    private final CommandFactory factory;
+
     private final ExecutorService executorService;
     private final TodoService service;
 
     @PostConstruct
-    public void registerShutdown() {
+    public void initialize() {
 
+        log.info("Registering shutdown hook for processor executor.");
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 
             log.info("Shutting down the executor");
@@ -35,6 +39,11 @@ public class TodoCommandProcessor implements CommandProcessor {
             }
 
         }));
+
+        // Warm-up caches to improve first response time
+        log.info("Warming up caches.");
+        process(factory.indexAllIdsCommand());
+        process(factory.indexEachCommand());
     }
 
     @Override
