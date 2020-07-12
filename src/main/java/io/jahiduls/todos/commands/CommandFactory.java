@@ -22,4 +22,12 @@ public final class CommandFactory {
         return ToggleTodoCommand.builder().id(id).build();
     }
 
+    public Command indexEachCommand() {
+        return IndexTodoCommand.builder().build();
+    }
+
+    public Command indexAllIdsCommand() {
+        return IndexTodoIdsCommand.builder().build();
+    }
+
 }

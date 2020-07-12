@@ -1,20 +1,19 @@
 package io.jahiduls.todos.commands;
 
-import io.jahiduls.todos.resources.TodoResource;
 import io.jahiduls.todos.services.TodoService;
+import java.util.List;
 import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Builder
-public class AddTodoCommand implements Command {
-
-    private final TodoResource resource;
+public class IndexTodoCommand implements Command {
 
     @Override
     public void execute(final TodoService service) {
 
-        service.saveTodo(resource.toTodo());
+        final List<String> todoIds = service.getAllIds();
+        todoIds.forEach(service::getOneById);
 
         log.info("{} executed successfully", this.getClass().getSimpleName());
 
