@@ -1,9 +1,10 @@
 {
     "license": "ISC",
     "scripts": {
-        "build": "./mvnw package && docker build -t todos.service:local .",
+        "build": "./mvnw package",
+        "package": "docker build -t todos.service:local .",
+        "rebuild": "yarn build && yarn package",
         "deploy": "docker-compose up -d",
-        "stop": "docker-compose down",
-        "rebuild": "yarn build && yarn deploy"
+        "shutdown": "docker-compose down"
     }
 }
