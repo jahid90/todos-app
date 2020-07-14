@@ -1,4 +1,4 @@
-FROM openjdk:14-alpine
+FROM openjdk:11-jre
 
 WORKDIR /usr/app
 
