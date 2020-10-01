@@ -5,7 +5,7 @@ dependencies:
   '@material-ui/system': 4.9.14_react-dom@16.13.1+react@16.13.1
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 9.5.0_react-dom@16.13.1+react@16.13.1
-  '@testing-library/user-event': 7.2.1
+  '@testing-library/user-event': 12.1.6
   axios: 0.19.2
   event-emitter3: 1.0.4
   react: 16.13.1
@@ -1788,12 +1788,17 @@ packages:
       react-dom: '*'
     resolution:
       integrity: sha512-di1b+D0p+rfeboHO5W7gTVeZDIK5+maEgstrZbWZSSvxDyfDRkkyBE1AJR5Psd6doNldluXlCWqXriUfqu/9Qg==
-  /@testing-library/user-event/7.2.1:
+  /@testing-library/user-event/12.1.6:
+    dependencies:
+      '@babel/runtime': 7.10.4
     dev: false
+    engines:
+      node: '>=10'
+      npm: '>=6'
     peerDependencies:
-      '@testing-library/dom': '>=5'
+      '@testing-library/dom': '>=7.21.4'
     resolution:
-      integrity: sha512-oZ0Ib5I4Z2pUEcoo95cT1cr6slco9WY7yiPpG+RGNkj8YcYgJnM7pXmYmorNOReh8MIGcKSqXyeGjxnr8YiZbA==
+      integrity: sha512-BdSe6cmzDEapTBH3s1NKbzu+GyX5bJKraKwVpM2vZF1+EEWxZr0EiA0z9bA5Nux8P+6nKMOZKsXQrj5q/kicfQ==
   /@types/babel__core/7.1.9:
     dependencies:
       '@babel/parser': 7.10.4
@@ -11788,7 +11793,7 @@ specifiers:
   '@material-ui/system': 4.9.14
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 9.5.0
-  '@testing-library/user-event': 7.2.1
+  '@testing-library/user-event': 12.1.6
   axios: 0.19.2
   event-emitter3: 1.0.4
   react: 16.13.1
