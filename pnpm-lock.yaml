@@ -11,7 +11,7 @@ dependencies:
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
   react-scripts: 3.4.0
-  uuid: 8.2.0
+  uuid: 8.3.0
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.10.4:
@@ -11810,11 +11810,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
-  /uuid/8.2.0:
+  /uuid/8.3.0:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-CYpGiFTUrmI6OBMkAdjSDM0k5h8SkkiTP4WAjQgDgNB1S3Ou9VBEvr6q0Kv2H1mMk7IWfxYGpMH5sd5AvcIV2Q==
+      integrity: sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
   /v8-compile-cache/2.1.1:
     dev: false
     resolution:
@@ -12369,16 +12369,16 @@ packages:
     resolution:
       integrity: sha512-AX3Zw5iPruN5ie6xGRIDgqkT+ZhnRlZMLMHAs8tg7nRruy2Nb+i5o9bwghAogtM08q1dpr2LVoS8KSTMYpWXUw==
 specifiers:
-  '@material-ui/core': ^4.11.0
-  '@material-ui/icons': ^4.9.1
-  '@material-ui/lab': ^4.0.0-alpha.56
-  '@material-ui/system': ^4.9.14
-  '@testing-library/jest-dom': ^4.2.4
-  '@testing-library/react': ^9.3.2
-  '@testing-library/user-event': ^7.1.2
-  axios: ^0.19.2
-  event-emitter3: ^1.0.4
-  react: ^16.12.0
-  react-dom: ^16.12.0
+  '@material-ui/core': 4.11.0
+  '@material-ui/icons': 4.9.1
+  '@material-ui/lab': 4.0.0-alpha.56
+  '@material-ui/system': 4.9.14
+  '@testing-library/jest-dom': 4.2.4
+  '@testing-library/react': 9.5.0
+  '@testing-library/user-event': 7.2.1
+  axios: 0.19.2
+  event-emitter3: 1.0.4
+  react: 16.13.1
+  react-dom: 16.13.1
   react-scripts: 3.4.0
-  uuid: ^8.2.0
+  uuid: 8.3.0
