@@ -5,7 +5,7 @@ dependencies:
   '@material-ui/system': 4.9.14_react-dom@16.13.1+react@16.13.1
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.0.4_react-dom@16.13.1+react@16.13.1
-  '@testing-library/user-event': 12.1.6
+  '@testing-library/user-event': 12.1.7
   axios: 0.19.2
   event-emitter3: 1.0.4
   react: 16.13.1
@@ -1841,14 +1841,14 @@ packages:
       react-dom: '*'
     resolution:
       integrity: sha512-U0fZO2zxm7M0CB5h1+lh31lbAwMSmDMEMGpMT3BUPJwIjDEKYWOV4dx7lb3x2Ue0Pyt77gmz/VropuJnSz/Iew==
-  /@testing-library/user-event/12.1.6:
+  /@testing-library/user-event/12.1.7:
     dependencies:
       '@babel/runtime': 7.11.2
     dev: false
     peerDependencies:
       '@testing-library/dom': '>=5'
     resolution:
-      integrity: sha512-BdSe6cmzDEapTBH3s1NKbzu+GyX5bJKraKwVpM2vZF1+EEWxZr0EiA0z9bA5Nux8P+6nKMOZKsXQrj5q/kicfQ==
+      integrity: sha512-wuJiPqSQTVIHsYuumv1PAOBjblSrYA5vyN1nkUDF5HgfuWGz44jQsO22u7PQNkuACGYJE4eU0sybX8CzsySv+Q==
   /@types/aria-query/4.2.0:
     dev: false
     resolution:
@@ -11833,7 +11833,7 @@ specifiers:
   '@material-ui/system': 4.9.14
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.0.4
-  '@testing-library/user-event': 12.1.6
+  '@testing-library/user-event': 12.1.7
   axios: 0.19.2
   event-emitter3: 1.0.4
   react: 16.13.1
