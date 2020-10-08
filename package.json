@@ -22,10 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "package": "docker build -t todos.web:local .",
-    "rebuild": "yarn build && yarn package",
-    "deploy": "docker-compose up -d",
-    "shutdown": "docker-compose down"
+    "docker:build": "docker build -t todos.web:local .",
+    "docker:start": "docker-compose up -d",
+    "docker:stop": "docker-compose down"
   },
   "eslintConfig": {
     "extends": "react-app"
