@@ -19,6 +19,14 @@ spec:
         image: todos.web:local
         ports:
           - containerPort: 80
+        env:
+        - name: TODOS_SERVICE_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: todos-service-endpoint
+        - name: NODE_ENV
+          value: "production"
         resources:
           requests:
             memory: "64Mi"

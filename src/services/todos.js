@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const endpoint = process.env.TODOS_SERVICE_ENDPOINT || 'http://localhost:8080';
-const baseUrl = endpoint;
+const baseUrl = window.env.TODOS_SERVICE_ENDPOINT || 'http://localhost:8080';
+console.info(`Service endpoint loaded: ${baseUrl}`);
 
 const getAllTodos = async () => {
 

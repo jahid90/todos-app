@@ -24,7 +24,9 @@
     "eject": "react-scripts eject",
     "docker:build": "docker build -t todos.web:local .",
     "docker:start": "docker-compose up -d",
-    "docker:stop": "docker-compose down"
+    "docker:stop": "docker-compose down",
+    "k8s:start": "kubectl apply -f k8s/deployment.yaml",
+    "k8s:stop": "kubectl delete -f k8s/deployment.yaml"
   },
   "eslintConfig": {
     "extends": "react-app"
