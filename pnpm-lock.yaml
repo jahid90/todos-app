@@ -1,15 +1,15 @@
 dependencies:
-  '@material-ui/core': 4.11.0_react-dom@16.13.1+react@16.13.1
-  '@material-ui/icons': 4.9.1_64fe165cdb3bb1449f67ef4ad817869b
-  '@material-ui/lab': 4.0.0-alpha.56_64fe165cdb3bb1449f67ef4ad817869b
-  '@material-ui/system': 4.9.14_react-dom@16.13.1+react@16.13.1
+  '@material-ui/core': 4.11.0_react-dom@16.14.0+react@16.14.0
+  '@material-ui/icons': 4.9.1_95a14655f7783aafa461b3f6228f005c
+  '@material-ui/lab': 4.0.0-alpha.56_95a14655f7783aafa461b3f6228f005c
+  '@material-ui/system': 4.9.14_react-dom@16.14.0+react@16.14.0
   '@testing-library/jest-dom': 5.11.4
-  '@testing-library/react': 11.1.0_react-dom@16.13.1+react@16.13.1
+  '@testing-library/react': 11.1.0_react-dom@16.14.0+react@16.14.0
   '@testing-library/user-event': 12.1.8
   axios: 0.19.2
   event-emitter3: 1.0.4
-  react: 16.13.1
-  react-dom: 16.13.1_react@16.13.1
+  react: 16.14.0
+  react-dom: 16.14.0_react@16.14.0
   react-scripts: 3.4.3
   uuid: 8.3.1
 lockfileVersion: 5.1
@@ -1518,22 +1518,22 @@ packages:
       node: '>= 10.14.2'
     resolution:
       integrity: sha512-BDPG23U0qDeAvU4f99haztXwdAg3hz4El95LkAM+tHAqqhiVzRpEGHHU8EDxT/AnxOrA65YjLBwDahdJ9pTLJQ==
-  /@material-ui/core/4.11.0_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/core/4.11.0_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/styles': 4.10.0_react-dom@16.13.1+react@16.13.1
-      '@material-ui/system': 4.9.14_react-dom@16.13.1+react@16.13.1
+      '@material-ui/styles': 4.10.0_react-dom@16.14.0+react@16.14.0
+      '@material-ui/system': 4.9.14_react-dom@16.14.0+react@16.14.0
       '@material-ui/types': 5.1.0
-      '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@material-ui/utils': 4.10.2_react-dom@16.14.0+react@16.14.0
       '@types/react-transition-group': 4.4.0
       clsx: 1.1.1
       hoist-non-react-statics: 3.3.2
       popper.js: 1.16.1-lts
       prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
       react-is: 16.13.1
-      react-transition-group: 4.4.1_react-dom@16.13.1+react@16.13.1
+      react-transition-group: 4.4.1_react-dom@16.14.0+react@16.14.0
     dev: false
     engines:
       node: '>=8.0.0'
@@ -1546,12 +1546,12 @@ packages:
         optional: true
     resolution:
       integrity: sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
-  /@material-ui/icons/4.9.1_64fe165cdb3bb1449f67ef4ad817869b:
+  /@material-ui/icons/4.9.1_95a14655f7783aafa461b3f6228f005c:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/core': 4.11.0_react-dom@16.13.1+react@16.13.1
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      '@material-ui/core': 4.11.0_react-dom@16.14.0+react@16.14.0
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     dev: false
     engines:
       node: '>=8.0.0'
@@ -1565,15 +1565,15 @@ packages:
         optional: true
     resolution:
       integrity: sha512-GBitL3oBWO0hzBhvA9KxqcowRUsA0qzwKkURyC8nppnC3fw54KPKZ+d4V1Eeg/UnDRSzDaI9nGCdel/eh9AQMg==
-  /@material-ui/lab/4.0.0-alpha.56_64fe165cdb3bb1449f67ef4ad817869b:
+  /@material-ui/lab/4.0.0-alpha.56_95a14655f7783aafa461b3f6228f005c:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/core': 4.11.0_react-dom@16.13.1+react@16.13.1
-      '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@material-ui/core': 4.11.0_react-dom@16.14.0+react@16.14.0
+      '@material-ui/utils': 4.10.2_react-dom@16.14.0+react@16.14.0
       clsx: 1.1.1
       prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
       react-is: 16.13.1
     dev: false
     engines:
@@ -1588,12 +1588,12 @@ packages:
         optional: true
     resolution:
       integrity: sha512-xPlkK+z/6y/24ka4gVJgwPfoCF4RCh8dXb1BNE7MtF9bXEBLN/lBxNTK8VAa0qm3V2oinA6xtUIdcRh0aeRtVw==
-  /@material-ui/styles/4.10.0_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/styles/4.10.0_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.11.2
       '@emotion/hash': 0.8.0
       '@material-ui/types': 5.1.0
-      '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@material-ui/utils': 4.10.2_react-dom@16.14.0+react@16.14.0
       clsx: 1.1.1
       csstype: 2.6.13
       hoist-non-react-statics: 3.3.2
@@ -1606,8 +1606,8 @@ packages:
       jss-plugin-rule-value-function: 10.4.0
       jss-plugin-vendor-prefixer: 10.4.0
       prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     dev: false
     engines:
       node: '>=8.0.0'
@@ -1620,14 +1620,14 @@ packages:
         optional: true
     resolution:
       integrity: sha512-XPwiVTpd3rlnbfrgtEJ1eJJdFCXZkHxy8TrdieaTvwxNYj42VnnCyFzxYeNW9Lhj4V1oD8YtQ6S5Gie7bZDf7Q==
-  /@material-ui/system/4.9.14_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/system/4.9.14_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@material-ui/utils': 4.10.2_react-dom@16.14.0+react@16.14.0
       csstype: 2.6.13
       prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     dev: false
     engines:
       node: '>=8.0.0'
@@ -1649,12 +1649,12 @@ packages:
         optional: true
     resolution:
       integrity: sha512-7cqRjrY50b8QzRSYyhSpx4WRw2YuO0KKIGQEVk5J8uoz2BanawykgZGoWEqKm7pVIbzFDN0SpPcVV4IhOFkl8A==
-  /@material-ui/utils/4.10.2_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/utils/4.10.2_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.11.2
       prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
       react-is: 16.13.1
     dev: false
     engines:
@@ -1828,12 +1828,12 @@ packages:
       yarn: '>=1'
     resolution:
       integrity: sha512-6RRn3epuweBODDIv3dAlWjOEHQLpGJHB2i912VS3JQtsD22+ENInhdDNl4ZZQiViLlIfFinkSET/J736ytV9sw==
-  /@testing-library/react/11.1.0_react-dom@16.13.1+react@16.13.1:
+  /@testing-library/react/11.1.0_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.11.2
       '@testing-library/dom': 7.26.0
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     dev: false
     engines:
       node: '>=10'
@@ -9480,18 +9480,18 @@ packages:
       node: '>=8.10'
     resolution:
       integrity: sha512-XxTbgJnYZmxuPtY3y/UV0D8/65NKkmaia4rXzViknVnZeVlklSh8u6TnaEYPfAi/Gh1TP4mEOXHI6jQOPbeakQ==
-  /react-dom/16.13.1_react@16.13.1:
+  /react-dom/16.14.0_react@16.14.0:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.7.2
-      react: 16.13.1
+      react: 16.14.0
       scheduler: 0.19.1
     dev: false
     peerDependencies:
-      react: ^16.13.1
+      react: ^16.14.0
     resolution:
-      integrity: sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
+      integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
   /react-error-overlay/6.0.7:
     dev: false
     resolution:
@@ -9565,21 +9565,21 @@ packages:
         optional: true
     resolution:
       integrity: sha512-oSnoWmii/iKdeQiwaO6map1lUaZLmG0xIUyb/HwCVFLT7gNbj8JZ9RmpvMCZ4fB98ZUMRfNmp/ft8uy/xD1RLA==
-  /react-transition-group/4.4.1_react-dom@16.13.1+react@16.13.1:
+  /react-transition-group/4.4.1_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.11.2
       dom-helpers: 5.2.0
       loose-envify: 1.4.0
       prop-types: 15.7.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
     dev: false
     peerDependencies:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
     resolution:
       integrity: sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==
-  /react/16.13.1:
+  /react/16.14.0:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
@@ -9588,7 +9588,7 @@ packages:
     engines:
       node: '>=0.10.0'
     resolution:
-      integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
+      integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
   /read-pkg-up/2.0.0:
     dependencies:
       find-up: 2.1.0
@@ -11842,7 +11842,7 @@ specifiers:
   '@testing-library/user-event': 12.1.8
   axios: 0.19.2
   event-emitter3: 1.0.4
-  react: 16.13.1
-  react-dom: 16.13.1
+  react: 16.14.0
+  react-dom: 16.14.0
   react-scripts: 3.4.3
   uuid: 8.3.1
