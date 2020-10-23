@@ -6,7 +6,7 @@ dependencies:
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.1.0_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.1.10
-  axios: 0.19.2
+  axios: 0.21.0
   event-emitter3: 1.0.4
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
@@ -2595,7 +2595,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
-  /axios/0.19.2:
+  /axios/0.21.0:
     dependencies:
       follow-redirects: 1.12.1
     dev: false
@@ -5187,14 +5187,6 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
-  /follow-redirects/1.5.10:
-    dependencies:
-      debug: 3.1.0
-    dev: false
-    engines:
-      node: '>=4.0'
-    resolution:
-      integrity: sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
   /for-in/0.1.8:
     dev: false
     engines:
@@ -11825,7 +11817,7 @@ specifiers:
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.1.0
   '@testing-library/user-event': 12.1.10
-  axios: 0.19.2
+  axios: 0.21.0
   event-emitter3: 1.0.4
   react: 17.0.1
   react-dom: 17.0.1
