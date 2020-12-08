@@ -11,7 +11,7 @@ dependencies:
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
   react-scripts: 3.4.4
-  uuid: 8.3.1
+  uuid: 8.3.2
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.10.4:
@@ -11286,11 +11286,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
-  /uuid/8.3.1:
+  /uuid/8.3.2:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==
+      integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
   /v8-compile-cache/2.1.1:
     dev: false
     resolution:
@@ -11832,4 +11832,4 @@ specifiers:
   react: 17.0.1
   react-dom: 17.0.1
   react-scripts: 3.4.4
-  uuid: 8.3.1
+  uuid: 8.3.2
