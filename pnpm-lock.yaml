@@ -4,7 +4,7 @@ dependencies:
   '@material-ui/lab': 4.0.0-alpha.56_8532a02bc34db2e3d8b625c270285640
   '@material-ui/system': 4.9.14_react-dom@17.0.1+react@17.0.1
   '@testing-library/jest-dom': 5.11.6
-  '@testing-library/react': 11.1.0_react-dom@17.0.1+react@17.0.1
+  '@testing-library/react': 11.2.2_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.1.10
   axios: 0.21.0
   event-emitter3: 1.0.4
@@ -1245,6 +1245,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
+  /@babel/runtime/7.12.5:
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: false
+    resolution:
+      integrity: sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
   /@babel/runtime/7.9.0:
     dependencies:
       regenerator-runtime: 0.13.7
@@ -1506,7 +1512,7 @@ packages:
       node: '>= 8.3'
     resolution:
       integrity: sha512-OXD0RgQ86Tu3MazKo8bnrkDRaDXXMGUqd+kTtLtK1Zb7CRzQcaSRPPPV37SvYTdevXEBVxe0HXylEjs8ibkmCw==
-  /@jest/types/26.3.0:
+  /@jest/types/26.6.2:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 3.0.0
@@ -1517,7 +1523,7 @@ packages:
     engines:
       node: '>= 10.14.2'
     resolution:
-      integrity: sha512-BDPG23U0qDeAvU4f99haztXwdAg3hz4El95LkAM+tHAqqhiVzRpEGHHU8EDxT/AnxOrA65YjLBwDahdJ9pTLJQ==
+      integrity: sha512-fC6QCp7Sc5sX6g8Tvbmj4XUTbyrik0akgRy03yjXbQaBWWNWGE7SGtJk98m0N8nzegD/7SggrUlivxo5ax4KWQ==
   /@material-ui/core/4.11.0_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.11.2
@@ -1796,21 +1802,21 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-bjnWolZ6KVsHhgyCoYRFmbd26p8XVbulCzSG53BDQqAr+JOAderYK7CuYrB3bDjHJuF6LJ7Wrr42+goLRV9qIg==
-  /@testing-library/dom/7.26.0:
+  /@testing-library/dom/7.29.0:
     dependencies:
       '@babel/code-frame': 7.10.4
-      '@babel/runtime': 7.11.2
+      '@babel/runtime': 7.12.5
       '@types/aria-query': 4.2.0
       aria-query: 4.2.2
       chalk: 4.1.0
-      dom-accessibility-api: 0.5.3
+      dom-accessibility-api: 0.5.4
       lz-string: 1.4.4
-      pretty-format: 26.4.2
+      pretty-format: 26.6.2
     dev: false
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-fyKFrBbS1IigaE3FV21LyeC7kSGF84lqTlSYdKmGaHuK2eYQ/bXVPM5vAa2wx/AU1iPD6oQHsxy2QQ17q9AMCg==
+      integrity: sha512-0hhuJSmw/zLc6ewR9cVm84TehuTd7tbqBX9pRNSp8znJ9gTmSgesdbiGZtt8R6dL+2rgaPFp9Yjr7IU1HWm49w==
   /@testing-library/jest-dom/5.11.6:
     dependencies:
       '@babel/runtime': 7.11.2
@@ -1828,10 +1834,10 @@ packages:
       yarn: '>=1'
     resolution:
       integrity: sha512-cVZyUNRWwUKI0++yepYpYX7uhrP398I+tGz4zOlLVlUYnZS+Svuxv4fwLeCIy7TnBYKXUaOlQr3vopxL8ZfEnA==
-  /@testing-library/react/11.1.0_react-dom@17.0.1+react@17.0.1:
+  /@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1:
     dependencies:
-      '@babel/runtime': 7.11.2
-      '@testing-library/dom': 7.26.0
+      '@babel/runtime': 7.12.5
+      '@testing-library/dom': 7.29.0
       react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
     dev: false
@@ -1841,7 +1847,7 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-Nfz58jGzW0tgg3irmTB7sa02JLkLnCk+QN3XG6WiaGQYb0Qc4Ok00aujgjdxlIQWZHbb4Zj5ZOIeE9yKFSs4sA==
+      integrity: sha512-jaxm0hwUjv+hzC+UFEywic7buDC9JQ1q3cDsrWVSDAPmLotfA6E6kUHlYm/zOeGCac6g48DR36tFHxl7Zb+N5A==
   /@testing-library/user-event/12.1.10:
     dependencies:
       '@babel/runtime': 7.11.2
@@ -4211,10 +4217,10 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
-  /dom-accessibility-api/0.5.3:
+  /dom-accessibility-api/0.5.4:
     dev: false
     resolution:
-      integrity: sha512-yfqzAi1GFxK6EoJIZKgxqJyK6j/OjEFEUi2qkNThD/kUhoCFSG1izq31B5xuxzbJBGw9/67uPtkPMYAzWL7L7Q==
+      integrity: sha512-TvrjBckDy2c6v6RLxPv5QXOnU+SmF9nBII5621Ve5fu6Z/BDrENurBEvlC1f44lKEUVqOpK4w9E5Idc5/EgkLQ==
   /dom-converter/0.2.0:
     dependencies:
       utila: 0.4.0
@@ -9219,17 +9225,17 @@ packages:
       node: '>= 8.3'
     resolution:
       integrity: sha512-kbo/kq2LQ/A/is0PQwsEHM7Ca6//bGPPvU6UnsdDRSKTWxT/ru/xb88v4BJf6a69H+uTytOEsTusT9ksd/1iWQ==
-  /pretty-format/26.4.2:
+  /pretty-format/26.6.2:
     dependencies:
-      '@jest/types': 26.3.0
+      '@jest/types': 26.6.2
       ansi-regex: 5.0.0
       ansi-styles: 4.2.1
-      react-is: 16.13.1
+      react-is: 17.0.1
     dev: false
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-zK6Gd8zDsEiVydOCGLkoBoZuqv8VTiHyAbKznXe/gaph/DAeZOmit9yMfgIz5adIgAMMs5XfoYSwAX3jcCO1tA==
+      integrity: sha512-7AeGuCYNGmycyQbCqd/3PWH4eOoX/OiCa0uphp57NVTeAGdJGaAliecxwBDHYQCIvrW7aDBZCYeNTP/WX69mkg==
   /process-nextick-args/2.0.1:
     dev: false
     resolution:
@@ -9480,6 +9486,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+  /react-is/17.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
   /react-scripts/3.4.4:
     dependencies:
       '@babel/core': 7.9.0
@@ -11815,7 +11825,7 @@ specifiers:
   '@material-ui/lab': 4.0.0-alpha.56
   '@material-ui/system': 4.9.14
   '@testing-library/jest-dom': 5.11.6
-  '@testing-library/react': 11.1.0
+  '@testing-library/react': 11.2.2
   '@testing-library/user-event': 12.1.10
   axios: 0.21.0
   event-emitter3: 1.0.4
