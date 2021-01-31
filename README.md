@@ -1,5 +1,5 @@
-![master](https://github.com/jahid90/todo-web/workflows/Node.js%20CI/badge.svg?branch=master)
-![pull\_requests](https://github.com/jahid90/todo-web/workflows/Node.js%20CI/badge.svg?event=pull_request)
+[![master](https://github.com/jahid90/todo-web/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/jahid90/todo-web/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster)
+[![pull_requests](https://github.com/jahid90/todo-web/workflows/Node.js%20CI/badge.svg?event=pull_request)](https://github.com/jahid90/todo-web/actions?query=workflow%3A%22Node.js+CI%22+event%3Apull_request)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
