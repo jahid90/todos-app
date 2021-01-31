@@ -1,6 +1,6 @@
 {
-    "license": "ISC",
-    "scripts": {
+    "version": "1",
+    "commands": {
         "build": "./mvnw package",
         "start": "java -jar target/*.jar",
         "docker:build": "docker build -t todos.service:local .",
