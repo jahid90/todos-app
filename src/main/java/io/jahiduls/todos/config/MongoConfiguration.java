@@ -14,8 +14,8 @@ public class MongoConfiguration {
     private static final String DB_HOST = "mongo";
     private static final String DB_PORT = "27017";
     private static final String DB_NAME = "todos";
-    private static final String DB_USER = "admin";
-    private static final String DB_PASSWORD = "admin_password";
+    private static final String DB_USER = "todos";
+    private static final String DB_PASSWORD = "secretpassword";
 
     @Bean
     public MongoClient mongoClient() {
@@ -28,6 +28,8 @@ public class MongoConfiguration {
                         .append(DB_HOST)
                         .append(":")
                         .append(DB_PORT)
+                        .append("/")
+                        .append(DB_NAME)
                         .toString()
         );
     }
