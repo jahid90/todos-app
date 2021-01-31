@@ -18,7 +18,7 @@ class AppHelper {
         Emitter.on(Commands.FILTER_INCOMPLETE, this.fetchIncompleteTodos);
     }
 
-    fetchTodos = async () => {
+    async fetchTodos() {
         try {
 
             console.info('executing fetch all');
@@ -32,7 +32,7 @@ class AppHelper {
         }
     }
 
-    addTodo = async (text) => {
+    async addTodo(text) {
         try {
 
             console.info('executing add one');
@@ -52,7 +52,7 @@ class AppHelper {
         }
     }
 
-    deleteTodo = async (id) => {
+    async deleteTodo(id) {
         try {
 
             console.info('executing delete one');
@@ -66,7 +66,7 @@ class AppHelper {
         }
     }
 
-    toggleTodo = async (id) => {
+    async toggleTodo(id) {
         try {
 
             console.info('executing toggle one');
@@ -80,7 +80,7 @@ class AppHelper {
         }
     }
 
-    fetchCompletedTodos = async () => {
+    async fetchCompletedTodos() {
         try {
 
             console.info('executing get completed');
@@ -94,7 +94,7 @@ class AppHelper {
         }
     }
 
-    fetchIncompleteTodos = async () => {
+    async fetchIncompleteTodos() {
         try {
 
             console.info('executing get incomplete');

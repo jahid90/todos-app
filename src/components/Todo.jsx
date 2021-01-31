@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
@@ -52,4 +53,12 @@ export default class Todo extends Component {
             </div>
         )
     }
+}
+
+Todo.propTypes = {
+    todo: PropTypes.shape({
+        id: PropTypes.string,
+        text: PropTypes.string,
+        completed: PropTypes.bool,
+    })
 }

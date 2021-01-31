@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint src/**/*.js src/**/*.jsx",
     "eject": "react-scripts eject",
     "docker:build": "docker build -t todos.web:local .",
     "docker:start": "docker-compose up -d",
@@ -42,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.22.0"
   }
 }

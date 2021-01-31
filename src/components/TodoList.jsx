@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Todo from './Todo';
 import FilterTodos from './FilterTodos';
@@ -21,4 +22,8 @@ export default class TodoList extends Component {
             </div>
         )
     }
+}
+
+TodoList.propTypes = {
+    todos: PropTypes.arrayOf(PropTypes.element),
 }

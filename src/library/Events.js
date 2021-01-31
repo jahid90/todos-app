@@ -15,4 +15,8 @@ export const Commands = {
     FILTER_INCOMPLETE: 'filter-incomplete'
 }
 
-export default { Events, Commands };
+export default {
+    Events,
+    Commands,
+}
+
