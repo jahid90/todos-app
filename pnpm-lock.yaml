@@ -11708,8 +11708,8 @@ specifiers:
   '@testing-library/react': 11.2.3
   '@testing-library/user-event': 12.6.2
   axios: 0.21.1
-  eslint: ^6.6.0
-  eslint-plugin-react: ^7.22.0
+  eslint: 6.8.0
+  eslint-plugin-react: 7.22.0
   event-emitter3: 1.0.4
   react: 17.0.1
   react-dom: 17.0.1
