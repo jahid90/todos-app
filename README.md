@@ -1,3 +1,7 @@
+## Build status
+
+![master](https://github.com/jahid90/todo-web/workflows/Node.js%20CI/badge.svg?branch=master) ![pull requests](https://github.com/jahid90/todo-web/workflows/Node.js%20CI/badge.svg?event=pull_request)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
