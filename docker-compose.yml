@@ -1,19 +1,16 @@
 version: '3'
-
 networks:
   default:
     external:
       name: home_network
-
 services:
   todos.web:
     build: .
-    image: todos.web:local
+    image: 'todos.web:local'
     container_name: todos-web
     restart: unless-stopped
     environment:
-      - TODOS_SERVICE_ENDPOINT=http://api.jahiduls.local/todos
+      - 'TODOS_SERVICE_ENDPOINT=http://api.jahiduls.local/todos'
       - NODE_ENV=production
     expose:
       - 80
-
