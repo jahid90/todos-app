@@ -4,7 +4,7 @@ dependencies:
   '@material-ui/lab': 4.0.0-alpha.57_c640d2d0176bfcab1d99b942ffa7ebe7
   '@material-ui/system': 4.11.3_react-dom@17.0.1+react@17.0.1
   '@testing-library/jest-dom': 5.11.9
-  '@testing-library/react': 11.2.3_react-dom@17.0.1+react@17.0.1
+  '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.6.3
   axios: 0.21.1
   event-emitter3: 1.0.4
@@ -1944,7 +1944,7 @@ packages:
       yarn: '>=1'
     resolution:
       integrity: sha512-Mn2gnA9d1wStlAIT2NU8J15LNob0YFBVjs2aEQ3j8rsfRQo+lAs7/ui1i2TGaJjapLmuNPLTsrm+nPjmZDwpcQ==
-  /@testing-library/react/11.2.3_react-dom@17.0.1+react@17.0.1:
+  /@testing-library/react/11.2.5_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.12.5
       '@testing-library/dom': 7.29.4
@@ -1957,7 +1957,7 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-BirBUGPkTW28ULuCwIbYo0y2+0aavHczBT6N9r3LrsswEW3pg25l1wgoE7I8QBIy1upXWkwKpYdWY7NYYP0Bxw==
+      integrity: sha512-yEx7oIa/UWLe2F2dqK0FtMF9sJWNXD+2PPtp39BvE0Kh9MJ9Kl0HrZAgEuhUJR+Lx8Di6Xz+rKwSdEPY2UV8ZQ==
   /@testing-library/user-event/12.6.3:
     dependencies:
       '@babel/runtime': 7.12.5
@@ -12332,7 +12332,7 @@ specifiers:
   '@material-ui/lab': 4.0.0-alpha.57
   '@material-ui/system': 4.11.3
   '@testing-library/jest-dom': 5.11.9
-  '@testing-library/react': 11.2.3
+  '@testing-library/react': 11.2.5
   '@testing-library/user-event': 12.6.3
   axios: 0.21.1
   eslint: 7.19.0
