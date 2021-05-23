@@ -1,16 +1,24 @@
 version: '3'
+
 networks:
-  default:
-    external:
-      name: home_network
+  frontend:
+    name: frontend-network
+    driver: bridge
+
 services:
   todos.web:
-    build: .
-    image: 'todos.web:local'
-    container_name: todos-web
+    build:
+      context: .
+      args:
+        - NODE_ENV=production
+        - PUBLIC_URL=/w/todos
+    image: todos.web:local
+    container_name: todos.web
     restart: unless-stopped
     environment:
-      - 'TODOS_SERVICE_ENDPOINT=http://api.jahiduls.local/todos'
+      - TODOS_SERVICE_ENDPOINT=http://frontend.jahiduls.local/api/todos
       - NODE_ENV=production
+    networks:
+      - frontend
     expose:
       - 80
