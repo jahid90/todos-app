@@ -1,8 +1,8 @@
 version: '3'
 
 networks:
-  frontend:
-    name: frontend-network
+  widget:
+    name: widget-network
     driver: bridge
 
 services:
@@ -19,6 +19,6 @@ services:
       - TODOS_SERVICE_ENDPOINT=http://frontend.jahiduls.local/api/todos
       - NODE_ENV=production
     networks:
-      - frontend
+      - widget
     expose:
       - 80
