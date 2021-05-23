@@ -1,2 +1,8 @@
 node_modules/
 .git/
+.github/
+k8s/
+Dockerfile
+docker-compose.yml
+README.md
+renovate.json
