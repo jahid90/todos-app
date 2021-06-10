@@ -3,7 +3,7 @@
  */
 
 plugins {
-    id 'org.springframework.boot' version '2.5.0'  
+    id 'org.springframework.boot' version '2.5.1'  
     id 'java'
 }
 
@@ -15,13 +15,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.5.0'
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.0'
-    implementation 'org.springframework.boot:spring-boot-starter-cache:2.5.0'
-    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.5.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.1'
+    implementation 'org.springframework.boot:spring-boot-starter-cache:2.5.1'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.1'
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.1'
 }
 
 group = 'io.jahiduls'
