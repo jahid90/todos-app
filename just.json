@@ -1,8 +1,9 @@
 {
     "version": "1",
     "commands": {
-        "build": "./mvnw package",
-        "start": "java -jar target/*.jar",
+        "clean": "./gradlew clean",
+        "build": "./gradlew bootJar",
+        "start": "./gradlew bootRun",
         "docker:build": "docker build -t todos.service:local .",
         "docker:start": "docker-compose up -d",
         "docker:stop": "docker-compose down"
