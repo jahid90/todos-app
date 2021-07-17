@@ -7,7 +7,7 @@ specifiers:
   '@material-ui/system': 4.12.1
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
-  '@testing-library/user-event': 13.1.9
+  '@testing-library/user-event': 13.2.0
   axios: 0.21.1
   eslint: 7.30.0
   eslint-plugin-react: 7.24.0
@@ -24,7 +24,7 @@ dependencies:
   '@material-ui/system': 4.12.1_react-dom@17.0.2+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
-  '@testing-library/user-event': 13.1.9
+  '@testing-library/user-event': 13.2.0
   axios: 0.21.1
   event-emitter3: 1.0.4
   react: 17.0.2
@@ -2043,8 +2043,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /@testing-library/user-event/13.1.9:
-    resolution: {integrity: sha512-NZr0zL2TMOs2qk+dNlqrAdbaRW5dAmYwd1yuQ4r7HpkVEOj0MWuUjDWwKhcLd/atdBy8ZSMHSKp+kXSQe47ezg==}
+  /@testing-library/user-event/13.2.0:
+    resolution: {integrity: sha512-wDEuKkkChNfA02Fpd9A39AXmdmxkvRcHyt/cK3WWiPAQTyMhcKFNM51aQgpEDJUcdj7uPsOaDEESoW/L1b2kZA==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
