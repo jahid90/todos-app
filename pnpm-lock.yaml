@@ -10,7 +10,7 @@ specifiers:
   '@testing-library/user-event': 13.2.1
   axios: 0.21.1
   eslint: 7.32.0
-  eslint-plugin-react: 7.25.0
+  eslint-plugin-react: 7.25.1
   event-emitter3: 1.0.4
   react: 17.0.2
   react-dom: 17.0.2
@@ -34,7 +34,7 @@ dependencies:
 
 devDependencies:
   eslint: 7.32.0
-  eslint-plugin-react: 7.25.0_eslint@7.32.0
+  eslint-plugin-react: 7.25.1_eslint@7.32.0
 
 packages:
 
@@ -4972,8 +4972,8 @@ packages:
       string.prototype.matchall: 4.0.3
     dev: false
 
-  /eslint-plugin-react/7.25.0_eslint@7.32.0:
-    resolution: {integrity: sha512-bZL+HeB+Qaimb4ryOc+OYYOX0XnOr6FX30ZXkzL8iSJA3tATTtZ1YgYyjK3jGvVDcZMejfUaeS/5wKDfTgyfVw==}
+  /eslint-plugin-react/7.25.1_eslint@7.32.0:
+    resolution: {integrity: sha512-P4j9K1dHoFXxDNP05AtixcJEvIT6ht8FhYKsrkY0MPCPaUMYijhpWwNiRDZVtA8KFuZOkGSeft6QwH8KuVpJug==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7
