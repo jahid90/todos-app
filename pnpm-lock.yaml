@@ -8,7 +8,7 @@ specifiers:
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
   '@testing-library/user-event': 13.2.1
-  axios: 0.21.1
+  axios: 0.21.3
   eslint: 7.32.0
   eslint-plugin-react: 7.25.1
   event-emitter3: 1.0.4
@@ -25,7 +25,7 @@ dependencies:
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.2.1
-  axios: 0.21.1
+  axios: 0.21.3
   event-emitter3: 1.0.4
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -2936,10 +2936,12 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /axios/0.21.1:
-    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+  /axios/0.21.3:
+    resolution: {integrity: sha512-JtoZ3Ndke/+Iwt5n+BgSli/3idTvpt5OjKyoCmz4LX5+lPiY5l7C1colYezhlxThjNa/NhngCUWZSZFypIFuaA==}
     dependencies:
-      follow-redirects: 1.12.1
+      follow-redirects: 1.14.3
+    transitivePeerDependencies:
+      - debug
     dev: false
     resolution:
       integrity: sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
@@ -5546,6 +5548,16 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.1_supports-color@6.1.0
+    dev: false
+
+  /follow-redirects/1.14.3:
+    resolution: {integrity: sha512-3MkHxknWMUtb23apkgz/83fDoe+y+qr0TdgacGIA7bew+QLBo3vdgEN2xEsuXNivpFy4CyDhBBZnNZOtalmenw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /for-in/1.0.2:
