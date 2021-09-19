@@ -10,7 +10,7 @@ specifiers:
   '@testing-library/user-event': 13.2.1
   axios: 0.21.3
   eslint: 7.32.0
-  eslint-plugin-react: 7.25.2
+  eslint-plugin-react: 7.25.3
   event-emitter3: 1.0.4
   react: 17.0.2
   react-dom: 17.0.2
@@ -34,7 +34,7 @@ dependencies:
 
 devDependencies:
   eslint: 7.32.0
-  eslint-plugin-react: 7.25.2_eslint@7.32.0
+  eslint-plugin-react: 7.25.3_eslint@7.32.0
 
 packages:
 
@@ -4976,8 +4976,8 @@ packages:
       string.prototype.matchall: 4.0.3
     dev: false
 
-  /eslint-plugin-react/7.25.2_eslint@7.32.0:
-    resolution: {integrity: sha512-elx4585wgmryanJK4C5IoSKQyVZ+e7H0t2JOOtJNBql0cuercvSShvRReuLBbfx8687yW5yv+UL7pXwMsd6adQ==}
+  /eslint-plugin-react/7.25.3_eslint@7.32.0:
+    resolution: {integrity: sha512-ZMbFvZ1WAYSZKY662MBVEWR45VaBT6KSJCiupjrNlcdakB90juaZeDCbJq19e73JZQubqFtgETohwgAt8u5P6w==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7
@@ -4987,11 +4987,11 @@ packages:
       doctrine: 2.1.0
       eslint: 7.32.0
       estraverse: 5.2.0
-      has: 1.0.3
       jsx-ast-utils: 3.2.0
       minimatch: 3.0.4
       object.entries: 1.1.4
       object.fromentries: 2.0.4
+      object.hasown: 1.0.0
       object.values: 1.1.4
       prop-types: 15.7.2
       resolve: 2.0.0-next.3
@@ -8257,6 +8257,13 @@ packages:
       define-properties: 1.1.3
       es-abstract: 1.18.0-next.2
     dev: false
+
+  /object.hasown/1.0.0:
+    resolution: {integrity: sha512-qYMF2CLIjxxLGleeM0jrcB4kiv3loGVAjKQKvH8pSU/i2VcRRvUNmxbD+nEMmrXRfORhuVJuH8OtSYCZoue3zA==}
+    dependencies:
+      define-properties: 1.1.3
+      es-abstract: 1.18.3
+    dev: true
 
   /object.pick/1.3.0:
     resolution: {integrity: sha1-h6EKxMFpS9Lhy/U1kaZhQftd10c=}
