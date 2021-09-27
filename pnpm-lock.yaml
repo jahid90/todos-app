@@ -6,7 +6,7 @@ specifiers:
   '@material-ui/lab': 4.0.0-alpha.60
   '@material-ui/system': 4.12.1
   '@testing-library/jest-dom': 5.14.1
-  '@testing-library/react': 12.1.0
+  '@testing-library/react': 12.1.1
   '@testing-library/user-event': 13.2.1
   axios: 0.21.3
   eslint: 7.32.0
@@ -23,7 +23,7 @@ dependencies:
   '@material-ui/lab': 4.0.0-alpha.60_fced322086cd04afb0b6feec9e866920
   '@material-ui/system': 4.12.1_react-dom@17.0.2+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
-  '@testing-library/react': 12.1.0_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react': 12.1.1_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.2.1
   axios: 0.21.3
   event-emitter3: 1.0.4
@@ -2030,8 +2030,8 @@ packages:
       redent: 3.0.0
     dev: false
 
-  /@testing-library/react/12.1.0_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-Ge3Ht3qXE82Yv9lyPpQ7ZWgzo/HgOcHu569Y4ZGWcZME38iOFiOg87qnu6hTEa8jTJVL7zYovnvD3GE2nsNIoQ==}
+  /@testing-library/react/12.1.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-JDyWbvMuedEpP6SPL4Cvbhk59TVxQ3pwuR6ZfJHdRsHuxDd/ziSMA3nVM3fViaSbsQhuQFE/mvFrPrvQbL5kRQ==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '*'
