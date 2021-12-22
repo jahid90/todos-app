@@ -10,7 +10,7 @@ specifiers:
   '@testing-library/user-event': 13.5.0
   axios: 0.21.3
   eslint: 7.32.0
-  eslint-plugin-react: 7.27.1
+  eslint-plugin-react: 7.28.0
   event-emitter3: 1.0.4
   react: 17.0.2
   react-dom: 17.0.2
@@ -34,7 +34,7 @@ dependencies:
 
 devDependencies:
   eslint: 7.32.0
-  eslint-plugin-react: 7.27.1_eslint@7.32.0
+  eslint-plugin-react: 7.28.0_eslint@7.32.0
 
 packages:
 
@@ -4773,7 +4773,7 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /eslint-config-react-app/6.0.0_e102b332ceb216e23d7816933e9f453c:
+  /eslint-config-react-app/6.0.0_f10ae266ad11a474e85ab64fd3166840:
     resolution: {integrity: sha512-bpoAAC+YRfzq0dsTk+6v9aHm/uqnDwayNAXleMypGl6CpxI9oXXscVHo4fk3eJPIn+rsbtNetB4r/ZIidFIE8A==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -4803,7 +4803,7 @@ packages:
       eslint-plugin-import: 2.22.1_eslint@7.20.0
       eslint-plugin-jest: 24.1.3_eslint@7.20.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.20.0
-      eslint-plugin-react: 7.27.1_eslint@7.20.0
+      eslint-plugin-react: 7.28.0_eslint@7.20.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.20.0
       eslint-plugin-testing-library: 3.10.1_eslint@7.20.0
     dev: false
@@ -4916,8 +4916,8 @@ packages:
       eslint: 7.20.0
     dev: false
 
-  /eslint-plugin-react/7.27.1_eslint@7.20.0:
-    resolution: {integrity: sha512-meyunDjMMYeWr/4EBLTV1op3iSG3mjT/pz5gti38UzfM4OPpNc2m0t2xvKCOMU5D6FSdd34BIMFOvQbW+i8GAA==}
+  /eslint-plugin-react/7.28.0_eslint@7.20.0:
+    resolution: {integrity: sha512-IOlFIRHzWfEQQKcAD4iyYDndHwTQiCMcJVJjxempf203jnNLUnW34AXLrV33+nEXoifJE2ZEGmcjKPL8957eSw==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
@@ -4939,8 +4939,8 @@ packages:
       string.prototype.matchall: 4.0.6
     dev: false
 
-  /eslint-plugin-react/7.27.1_eslint@7.32.0:
-    resolution: {integrity: sha512-meyunDjMMYeWr/4EBLTV1op3iSG3mjT/pz5gti38UzfM4OPpNc2m0t2xvKCOMU5D6FSdd34BIMFOvQbW+i8GAA==}
+  /eslint-plugin-react/7.28.0_eslint@7.32.0:
+    resolution: {integrity: sha512-IOlFIRHzWfEQQKcAD4iyYDndHwTQiCMcJVJjxempf203jnNLUnW34AXLrV33+nEXoifJE2ZEGmcjKPL8957eSw==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
@@ -9586,12 +9586,12 @@ packages:
       dotenv: 8.2.0
       dotenv-expand: 5.1.0
       eslint: 7.20.0
-      eslint-config-react-app: 6.0.0_e102b332ceb216e23d7816933e9f453c
+      eslint-config-react-app: 6.0.0_f10ae266ad11a474e85ab64fd3166840
       eslint-plugin-flowtype: 5.2.0_eslint@7.20.0
       eslint-plugin-import: 2.22.1_eslint@7.20.0
       eslint-plugin-jest: 24.1.3_eslint@7.20.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.20.0
-      eslint-plugin-react: 7.27.1_eslint@7.20.0
+      eslint-plugin-react: 7.28.0_eslint@7.20.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.20.0
       eslint-plugin-testing-library: 3.10.1_eslint@7.20.0
       eslint-webpack-plugin: 2.5.2_eslint@7.20.0+webpack@4.44.2
