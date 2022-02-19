@@ -2,9 +2,15 @@ name: client
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - client/**
   pull_request:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - client/**
 
 jobs:
   build:

@@ -2,9 +2,15 @@ name: service
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - service/**
   pull_request:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - service/**
 
 jobs:
   build:
