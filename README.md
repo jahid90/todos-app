@@ -1,7 +1,5 @@
-[![service](https://github.com/jahid90/todos-app/service/actions/workflows/ci.yml/badge.svg)](https://github.com/jahid90/todo-service/actions/workflows/ci.yml)
-
-
-[![client](https://github.com/jahid90/todos-app/client/workflows/Node.js%20CI/badge.svg?branch=main)](https://github.com/jahid90/todo-web/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster)
+[![service](https://github.com/jahid90/todos-app/actions/workflows/service.yml/badge.svg)](https://github.com/jahid90/todos-app/actions/workflows/service.yml)
+[![client](https://github.com/jahid90/todos-app/actions/workflows/client.yml/badge.svg)](https://github.com/jahid90/todos-app/actions/workflows/client.yml)
 
 # Todos App
 A todos management app with a spring backend and a react frontend.
