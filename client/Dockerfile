@@ -1,4 +1,6 @@
-FROM node:16-alpine as builder
+FROM registry.jahiduls.mint/node:16-alpine as builder
+
+RUN npm i -g pnpm
 
 ARG NODE_ENV
 ARG PUBLIC_URL
@@ -6,12 +8,12 @@ ARG PUBLIC_URL
 WORKDIR /assets
 
 COPY package.json ./
-RUN NODE_ENV=$NODE_ENV yarn install
+RUN NODE_ENV=$NODE_ENV pnpm install
 
 COPY . ./
-RUN NODE_ENV=$NODE_ENV,PUBLIC_URL=$PUBLIC_URL  yarn build
+RUN NODE_ENV=$NODE_ENV,PUBLIC_URL=$PUBLIC_URL pnpm build
 
-FROM nginx:alpine as production
+FROM registry.jahiduls.mint/nginx:alpine as production
 
 COPY --from=builder /assets/build /usr/share/nginx/html
 COPY docker-entrypoint.sh generate-config-js.sh /

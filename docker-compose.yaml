@@ -1,0 +1,63 @@
+version: '3'
+
+networks:
+  traefik:
+    name: traefik
+    driver: bridge
+  backend:
+    name: backend
+    driver: bridge
+
+services:
+
+  todos:
+    build:
+      context: ./client
+      args:
+        - NODE_ENV=production
+        - PUBLIC_URL=/
+    image: registry.jahiduls.mint/todos-web:local
+    container_name: todos-web
+    restart: unless-stopped
+    networks:
+      - traefik
+    environment:
+      - TODOS_SERVICE_ENDPOINT=https://todos.jahiduls.mint/api
+      - NODE_ENV=production
+    expose:
+      - 80
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.http.routers.todos.entrypoints=websecure
+      - traefik.http.routers.todos.rule=Host(`todos.jahiduls.mint`)
+      - traefik.http.routers.todos.tls=true
+      - traefik.http.routers.todos.service=todos
+      - traefik.http.services.todos.loadbalancer.server.port=80
+
+  todos-service:
+    image: registry.jahiduls.mint/todos-service:local
+    container_name: todos-service
+    restart: unless-stopped
+    networks:
+      - traefik
+      - backend
+    expose:
+      - 80
+    environment:
+      - server.port=80
+      - spring.profiles.active=prod
+      - db.host=mongodb
+      - db.user=todos
+      - db.password=todos
+      - db.name=todos
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.http.routers.todos-service.entrypoints=websecure
+      - traefik.http.routers.todos-service.rule=Host(`todos.jahiduls.mint`) && PathPrefix(`/api`)
+      - traefik.http.routers.todos-service.tls=true
+      - traefik.http.routers.todos-service.service=todos-service
+      - traefik.http.routers.todos-service.middlewares=todos-service-strip-prefix
+      - traefik.http.services.todos-service.loadbalancer.server.port=80
+      - traefik.http.middlewares.todos-service-strip-prefix.stripprefix.prefixes=/api

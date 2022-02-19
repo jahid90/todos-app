@@ -1,0 +1,16 @@
+version: 6
+commands:
+  docker:build:
+    description: Builds docker images
+    steps:
+      - name: Build client
+        run: docker-compose build todos
+      - name: Build service
+        run: cd service && ./gradlew jibDockerBuild
+  docker:start:
+    description: Starts the containers
+    needs:
+      - docker:build
+    steps:
+      - name: Start containers
+        run: docker-compose up -d
