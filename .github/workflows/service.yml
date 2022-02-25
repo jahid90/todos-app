@@ -6,11 +6,17 @@ on:
       - main
     paths:
       - service/**
+      - .github/workflows/service*
   pull_request:
     branches:
       - main
     paths:
       - service/**
+      - .github/workflows/service*
+
+defaults:
+  run:
+    working-directory: service
 
 jobs:
   build:
@@ -25,4 +31,3 @@ jobs:
           java-version: "16"
       - name: Build with Gradle
         run: ./gradlew build
-        working-directory: service
