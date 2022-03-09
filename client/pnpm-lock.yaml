@@ -8,7 +8,7 @@ specifiers:
   '@testing-library/jest-dom': 5.16.2
   '@testing-library/react': 12.1.4
   '@testing-library/user-event': 13.5.0
-  axios: 0.26.0
+  axios: 0.26.1
   eslint-plugin-react: 7.29.3
   event-emitter3: 1.0.4
   react: 17.0.2
@@ -21,7 +21,7 @@ dependencies:
   '@material-ui/icons': 4.11.2_fced322086cd04afb0b6feec9e866920
   '@material-ui/lab': 4.0.0-alpha.60_fced322086cd04afb0b6feec9e866920
   '@material-ui/system': 4.12.1_react-dom@17.0.2+react@17.0.2
-  axios: 0.26.0
+  axios: 0.26.1
   event-emitter3: 1.0.4
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -3007,8 +3007,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /axios/0.26.0:
-    resolution: {integrity: sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==}
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
       follow-redirects: 1.14.9
     transitivePeerDependencies:
