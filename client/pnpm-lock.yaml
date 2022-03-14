@@ -9,7 +9,7 @@ specifiers:
   '@testing-library/react': 12.1.4
   '@testing-library/user-event': 13.5.0
   axios: 0.26.1
-  eslint-plugin-react: 7.29.3
+  eslint-plugin-react: 7.29.4
   event-emitter3: 1.0.4
   react: 17.0.2
   react-dom: 17.0.2
@@ -32,7 +32,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.2
   '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
-  eslint-plugin-react: 7.29.3
+  eslint-plugin-react: 7.29.4
 
 packages:
 
@@ -4345,7 +4345,7 @@ packages:
       eslint-plugin-import: 2.25.4_eslint@8.9.0
       eslint-plugin-jest: 25.7.0_df7857fd5fa8c990f09d5c02affff5b2
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.9.0
-      eslint-plugin-react: 7.29.3_eslint@8.9.0
+      eslint-plugin-react: 7.29.4_eslint@8.9.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.9.0
       eslint-plugin-testing-library: 5.0.5_eslint@8.9.0
     transitivePeerDependencies:
@@ -4458,8 +4458,8 @@ packages:
       eslint: 8.9.0
     dev: false
 
-  /eslint-plugin-react/7.29.3:
-    resolution: {integrity: sha512-MzW6TuCnDOcta67CkpDyRfRsEVx9FNMDV8wZsDqe1luHPdGTrQIUaUXD27Ja3gHsdOIs/cXzNchWGlqm+qRVRg==}
+  /eslint-plugin-react/7.29.4:
+    resolution: {integrity: sha512-CVCXajliVh509PcZYRFyu/BoUEz452+jtQJq2b3Bae4v3xBUWPLCmtmBM+ZinG4MzwmxJgJ2M5rMqhqLVn7MtQ==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
@@ -4480,8 +4480,8 @@ packages:
       string.prototype.matchall: 4.0.6
     dev: true
 
-  /eslint-plugin-react/7.29.3_eslint@8.9.0:
-    resolution: {integrity: sha512-MzW6TuCnDOcta67CkpDyRfRsEVx9FNMDV8wZsDqe1luHPdGTrQIUaUXD27Ja3gHsdOIs/cXzNchWGlqm+qRVRg==}
+  /eslint-plugin-react/7.29.4_eslint@8.9.0:
+    resolution: {integrity: sha512-CVCXajliVh509PcZYRFyu/BoUEz452+jtQJq2b3Bae4v3xBUWPLCmtmBM+ZinG4MzwmxJgJ2M5rMqhqLVn7MtQ==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
