@@ -10,7 +10,7 @@ specifiers:
   '@material-ui/system': 4.12.2
   '@testing-library/dom': 8.13.0
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1
+  '@testing-library/react': 13.2.0
   '@testing-library/user-event': 14.1.1
   autoprefixer: 10.4.7
   axios: 0.27.2
@@ -43,7 +43,7 @@ devDependencies:
   '@babel/plugin-transform-react-jsx': 7.17.3_@babel+core@7.17.10
   '@testing-library/dom': 8.13.0
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1_ef5jwxihqo6n7gxfmzogljlgcm
+  '@testing-library/react': 13.2.0_ef5jwxihqo6n7gxfmzogljlgcm
   '@testing-library/user-event': 14.1.1_tlwynutqiyp5mns3woioasuxnq
   autoprefixer: 10.4.7_postcss@8.4.13
   eslint: 8.15.0
@@ -2282,8 +2282,8 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/13.1.1_ef5jwxihqo6n7gxfmzogljlgcm:
-    resolution: {integrity: sha512-8mirlAa0OKaUvnqnZF6MdAh2tReYA2KtWVw1PKvaF5EcCZqgK5pl8iF+3uW90JdG5Ua2c2c2E2wtLdaug3dsVg==}
+  /@testing-library/react/13.2.0_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-Bprbz/SZVONCJy5f7hcihNCv313IJXdYiv0nSJklIs1SQCIHHNlnGNkosSXnGZTmesyGIcBGNppYhXcc11pb7g==}
     engines: {node: '>=12'}
     peerDependencies:
       react: ^18.0.0
