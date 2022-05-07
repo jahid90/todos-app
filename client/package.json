@@ -1,50 +1,59 @@
 {
-  "name": "react-todo",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "4.12.4",
-    "@material-ui/icons": "4.11.3",
-    "@material-ui/lab": "4.0.0-alpha.61",
-    "@material-ui/system": "4.12.2",
-    "axios": "0.27.2",
-    "event-emitter3": "1.0.4",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-scripts": "5.0.1",
-    "uuid": "8.3.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "eject": "react-scripts eject",
-    "docker:build": "docker build -t todos.web:local .",
-    "docker:start": "docker-compose up -d",
-    "docker:stop": "docker-compose down",
-    "k8s:start": "kubectl apply -f k8s/deployment.yaml",
-    "k8s:stop": "kubectl delete -f k8s/deployment.yaml"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.1.1",
-    "@testing-library/user-event": "14.1.1",
-    "eslint-plugin-react": "7.29.4"
-  }
+    "name": "react-todo",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@material-ui/core": "4.12.4",
+        "@material-ui/icons": "4.11.3",
+        "@material-ui/lab": "4.0.0-alpha.61",
+        "@material-ui/system": "4.12.2",
+        "axios": "0.27.2",
+        "event-emitter3": "1.0.4",
+        "prop-types": "^15.8.1",
+        "react": "18.1.0",
+        "react-dom": "18.1.0",
+        "uuid": "8.3.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.10",
+        "@babel/plugin-syntax-flow": "^7.16.7",
+        "@babel/plugin-transform-react-jsx": "^7.17.3",
+        "@testing-library/dom": "^8.13.0",
+        "@testing-library/jest-dom": "5.16.4",
+        "@testing-library/react": "13.1.1",
+        "@testing-library/user-event": "14.1.1",
+        "autoprefixer": "^10.4.7",
+        "eslint": "^8.15.0",
+        "eslint-plugin-react": "7.29.4",
+        "postcss": "^8.4.13",
+        "react-scripts": "5.0.1",
+        "typescript": "^4.6.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "lint": "eslint src/**/*.js src/**/*.jsx",
+        "eject": "react-scripts eject",
+        "docker:build": "docker build -t todos.web:local .",
+        "docker:start": "docker-compose up -d",
+        "docker:stop": "docker-compose down",
+        "k8s:start": "kubectl apply -f k8s/deployment.yaml",
+        "k8s:stop": "kubectl delete -f k8s/deployment.yaml"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
