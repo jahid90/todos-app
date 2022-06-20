@@ -8,7 +8,7 @@ specifiers:
   '@material-ui/icons': 4.11.3
   '@material-ui/lab': 4.0.0-alpha.61
   '@material-ui/system': 4.12.2
-  '@testing-library/dom': 8.13.0
+  '@testing-library/dom': 8.14.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0
   '@testing-library/user-event': 14.2.1
@@ -41,10 +41,10 @@ devDependencies:
   '@babel/core': 7.18.5
   '@babel/plugin-syntax-flow': 7.17.12_@babel+core@7.18.5
   '@babel/plugin-transform-react-jsx': 7.17.12_@babel+core@7.18.5
-  '@testing-library/dom': 8.13.0
+  '@testing-library/dom': 8.14.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
-  '@testing-library/user-event': 14.2.1_tlwynutqiyp5mns3woioasuxnq
+  '@testing-library/user-event': 14.2.1_ihvo3xlg2d6kwqju3os3zitn3y
   autoprefixer: 10.4.7_postcss@8.4.14
   eslint: 8.18.0
   eslint-plugin-react: 7.30.0_eslint@8.18.0
@@ -2172,8 +2172,8 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/dom/8.13.0:
-    resolution: {integrity: sha512-9VHgfIatKNXQNaZTtLnalIy0jNZzY35a4S3oi08YAt9Hv1VsfZ/DfA45lM8D/UhtHBGJ4/lGwp0PZkVndRkoOQ==}
+  /@testing-library/dom/8.14.0:
+    resolution: {integrity: sha512-m8FOdUo77iMTwVRCyzWcqxlEIk+GnopbrRI15a0EaLbpZSCinIVI4kSQzWhkShK83GogvEFJSsHF3Ws0z1vrqA==}
     engines: {node: '>=12'}
     dependencies:
       '@babel/code-frame': 7.16.7
@@ -2209,19 +2209,19 @@ packages:
       react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.17.2
-      '@testing-library/dom': 8.13.0
+      '@testing-library/dom': 8.14.0
       '@types/react-dom': 18.0.3
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@testing-library/user-event/14.2.1_tlwynutqiyp5mns3woioasuxnq:
+  /@testing-library/user-event/14.2.1_ihvo3xlg2d6kwqju3os3zitn3y:
     resolution: {integrity: sha512-HOr1QiODrq+0j9lKU5i10y9TbhxMBMRMGimNx10asdmau9cb8Xb1Vyg0GvTwyIL2ziQyh2kAloOtAQFBQVuecA==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
-      '@testing-library/dom': 8.13.0
+      '@testing-library/dom': 8.14.0
     dev: true
 
   /@tootallnate/once/1.1.2:
@@ -6710,7 +6710,7 @@ packages:
     dev: true
 
   /lz-string/1.4.4:
-    resolution: {integrity: sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=}
+    resolution: {integrity: sha512-0ckx7ZHRPqb0oUm8zNr+90mtf9DQB60H1wMCjBtfi62Kl3a7JbHob6gA2bC+xRvZoOL+1hzUK8jeuEIQE8svEQ==}
     hasBin: true
     dev: true
 
