@@ -15,7 +15,7 @@ specifiers:
   autoprefixer: 10.4.12
   axios: 0.27.2
   eslint: 8.25.0
-  eslint-plugin-react: 7.31.9
+  eslint-plugin-react: 7.31.10
   event-emitter3: 1.0.4
   postcss: 8.4.17
   prop-types: 15.8.1
@@ -47,7 +47,7 @@ devDependencies:
   '@testing-library/user-event': 14.4.3_aaq3sbffpfe3jnxzm2zngsddei
   autoprefixer: 10.4.12_postcss@8.4.17
   eslint: 8.25.0
-  eslint-plugin-react: 7.31.9_eslint@8.25.0
+  eslint-plugin-react: 7.31.10_eslint@8.25.0
   postcss: 8.4.17
   react-scripts: 5.0.1_c66uyihdk57kbham35275wnmau
   typescript: 4.8.4
@@ -4453,7 +4453,7 @@ packages:
       eslint-plugin-import: 2.25.4_cykecrnwwlc3ae4q7ksh7yjjve
       eslint-plugin-jest: 25.7.0_mtf2zx43d3ofshmhrswp63qbjq
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.25.0
-      eslint-plugin-react: 7.31.9_eslint@8.25.0
+      eslint-plugin-react: 7.31.10_eslint@8.25.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.25.0
       eslint-plugin-testing-library: 5.0.5_z4bbprzjrhnsfa24uvmcbu7f5q
       typescript: 4.8.4
@@ -4599,8 +4599,8 @@ packages:
       eslint: 8.25.0
     dev: true
 
-  /eslint-plugin-react/7.31.9_eslint@8.25.0:
-    resolution: {integrity: sha512-vrVJwusIw4L99lyfXjtCw8HWdloajsiYslMavogrBe2Gl8gr95TJsJnOMRasN4b4N24I3XuJf6aAV6MhyGmjqw==}
+  /eslint-plugin-react/7.31.10_eslint@8.25.0:
+    resolution: {integrity: sha512-e4N/nc6AAlg4UKW/mXeYWd3R++qUano5/o+t+wnWxIf+bLsOaH3a4q74kX3nDjYym3VBN4HyO9nEn1GcAqgQOA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
