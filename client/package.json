@@ -23,7 +23,7 @@
         "@testing-library/react": "13.4.0",
         "@testing-library/user-event": "14.4.3",
         "autoprefixer": "10.4.13",
-        "eslint": "8.28.0",
+        "eslint": "8.29.0",
         "eslint-plugin-react": "7.31.11",
         "postcss": "8.4.19",
         "react-scripts": "5.0.1",
