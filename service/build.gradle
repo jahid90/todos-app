@@ -20,8 +20,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.10'
     implementation 'org.springframework.boot:spring-boot-starter-cache:2.7.10'
     implementation 'org.springframework.boot:spring-boot-starter-actuator:2.7.10'
-    compileOnly 'org.projectlombok:lombok:1.18.26'
-    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.10'
 }
 
