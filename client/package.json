@@ -15,9 +15,9 @@
         "uuid": "9.0.0"
     },
     "devDependencies": {
-        "@babel/core": "7.21.3",
-        "@babel/plugin-syntax-flow": "7.18.6",
-        "@babel/plugin-transform-react-jsx": "7.21.0",
+        "@babel/core": "7.29.0",
+        "@babel/plugin-syntax-flow": "7.28.6",
+        "@babel/plugin-transform-react-jsx": "7.28.6",
         "@testing-library/dom": "8.20.0",
         "@testing-library/jest-dom": "5.16.5",
         "@testing-library/react": "13.4.0",
